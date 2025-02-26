@@ -15,60 +15,100 @@ type SkillsArrPropsType = SkillItemPropsType[]
 
 const skillsArr:SkillsArrPropsType = [
   {
-    iconId: 'productDesign',
-    title:'Product Design',
-    width: '107',
-    height:'108',
-    viewBox:'0 0 107 108',
-    gap: '33px'
+    iconId: 'html',
+    title:'HTML',
+    width: '120',
+    height:'120',
+    viewBox:'0 0 120 120',
+    gap: '30px'
   },
   {
-    text: 'UX/UI',
-    title:'UX/UI Design',
-    width: '75',
-    height:'75',
-    viewBox:'0 0 75 75',
-    gap: '60px'
+    iconId: 'css',
+    title:'CSS',
+    width: '120',
+    height:'120',
+    viewBox:'0 0 120 120',
+    gap: '30px'
   },
   {
-    iconId: 'iconDesign',
+    iconId: 'js',
     title:'Icon Design',
-    width: '75',
-    height:'75',
-    viewBox:'0 0 75 75',
-    gap: '49px'
+    width: '120',
+    height:'120',
+    viewBox:'0 0 120 120',
+    gap: '30px'
   },
   {
-    iconId: 'logoDesign',
-    title:'Logo Design',
-    width: '75',
-    height:'75',
-    viewBox:'0 0 75 75',
-    gap: '49px'
+    iconId: 'ts',
+    title:'TypeScript',
+    width: '120',
+    height:'120',
+    viewBox:'0 0 120 120',
+    gap: '30px'
   },
   {
-    iconId: 'backend',
-    title:'Backend',
-    width: '75',
-    height:'75',
-    viewBox:'0 0 75 75',
-    gap: '66px'
+    iconId: 'styledComponents',
+    title:'StyledComponents',
+    width: '120',
+    height:'120',
+    viewBox:'0 0 120 120',
+    gap: '30px'
   },
   {
-    iconId: 'frontend',
-    title:'Frontend',
-    width: '75',
-    height:'75',
-    viewBox:'0 0 75 75',
-    gap: '66px'
+    iconId: 'react',
+    title:'React',
+    width: '120',
+    height:'120',
+    viewBox:'0 0 120 120',
+    gap: '30px'
   },
   {
-    iconId: 'motion',
-    title:'Motion',
-    width: '75',
-    height:'75',
-    viewBox:'0 0 75 75',
-    gap: '66px'
+    iconId: 'reactNative',
+    title:'React Native',
+    width: '120',
+    height:'120',
+    viewBox:'0 0 120 120',
+    gap: '30px'
+  },
+  {
+    iconId: 'redux',
+    title:'Redux',
+    width: '120',
+    height:'120',
+    viewBox:'0 0 120 120',
+    gap: '30px'
+  },
+  {
+    iconId: 'github',
+    title:'Github',
+    width: '120',
+    height:'120',
+    viewBox:'-10 -10 120 120',
+    gap: '30px'
+  },
+  {
+    iconId: 'figma',
+    title:'Figma',
+    width: '120',
+    height:'120',
+    viewBox:'-10 -10 120 120',
+    gap: '30px'
+  },
+  {
+    iconId: 'git',
+    title:'Git',
+    width: '120',
+    height:'120',
+    viewBox:'-10 -10 120 120',
+    gap: '30px'
+  },
+  {
+    iconId: 'sass',
+    title:'Sass',
+    width: '120',
+    height:'87',
+    viewBox:'0 0 120 87',
+    gap: '30px'
   },
 ]
 

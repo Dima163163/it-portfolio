@@ -13,30 +13,30 @@ export const Main = () => {
     <StyledMain>
       <FlexWrapper $align='center' $justify='space-between'>
         <div>
-          <span>Hello</span>
-          <Name>I’m Gleb Kostrubov</Name>
+          <StyledGreeting>Hello</StyledGreeting>
+          <Name>I’m Dmitry Khlopov</Name>
           <MainTitle>
-            I've been doing web design, front-end and back-end development for a
-            year now. Do you need a website design, site layout, or maybe a
+            I've been doing front-end development for a
+            year now. Do you need a site layout, or maybe a
             turnkey website? Then contact me
           </MainTitle>
-          <Button text={'Contact me'} />
+          <Button>Contact me</Button>
         </div>
         <ImageWrapper>
           <Ellips
-            minWidthEllips='575px'
-            heightEllips='575px'
-            bgColor='#00c4f0'
-            boxShadow='0 0 152px 0 rgba(0, 193, 236, 0.25)'
-            widthSub='441px'
-            heightSub='441px'
-            bgColorSub='#2A2A2A'
-            inset='auto 0 0 auto'
-          />
+          $width='575px'
+          $height='575px'
+          $boxshadowcolor='0 4px 70px 0 rgba(0, 196, 240, 0.42)'
+          $inset='auto 0 0 auto'
+        >
+          <svg viewBox="150 150 575 575" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="439.5" cy="439.972" r="254" stroke="#00C4F0" strokeWidth="67" shapeRendering="crispEdges" />
+          </svg>
+        </Ellips>
           <StyleMainSkill $inset={'0 auto auto 0'}>Ps</StyleMainSkill>
           <StyleMainSkill $inset={'auto 0 0 auto'}>Ux</StyleMainSkill>
           <StyleMainSkill $inset={'auto auto 0 0'}>&lt;/</StyleMainSkill>
-          <StyleMainSkill $inset={'0 0 auto auto'}>Ps</StyleMainSkill>
+          <StyleMainSkill $inset={'0 0 auto auto'}>UI</StyleMainSkill>
           <Photo src={photo} />
         </ImageWrapper>
       </FlexWrapper>
@@ -44,12 +44,16 @@ export const Main = () => {
   );
 };
 
+const StyledGreeting = styled.span`
+  
+`
+
 const StyledMain = styled.div`
   background-color: #2A2A2A;
 `;
 
 const Photo = styled.img`
-  width: 450px;
+  width: 530px;
   height: 600px;
   object-fit: cover;
   position: relative;
@@ -57,11 +61,11 @@ const Photo = styled.img`
 `;
 
 const MainTitle = styled.h1`
-  
+  display: block;
 `;
 
-const Name = styled.h2`
-  
+const Name = styled.span`
+  display: block;
 `;
 
 const ImageWrapper = styled.div`
