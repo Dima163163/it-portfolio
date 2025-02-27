@@ -19,6 +19,8 @@ export const Slider = () => {
 
 const StyledSlider = styled.div`
   display: flex;
+  gap: 40px;
+  align-items: center;
 `;
 
 

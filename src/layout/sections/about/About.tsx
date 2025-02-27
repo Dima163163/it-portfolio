@@ -16,7 +16,7 @@ export const About = () => {
             $width='792px'
             $height='792px'
             $boxshadowcolor='0 4px 70px 0 rgba(255, 255, 255, 0.25)'
-            $inset='0 auto auto 0'
+            $inset='60px auto auto -100px'
           >
             <svg viewBox="70 70 792 792" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="466" cy="462" r="351.5" stroke="#E4E4E4" strokeWidth="89" shapeRendering="crispEdges" />
@@ -99,20 +99,20 @@ type WrapperPhotoPropsType = {
 
 const StyledAbout = styled.section`
   padding: 50px 0;
+  overflow: hidden;
 `;
 
 const StyledAboutWrapper = styled.div`
   position: relative;
   display: flex;
-  margin-left: -47px;
-  margin-right: -61px;
+  margin-right: -58px;
 `
 
 const AboutContent = styled.div`
   position: relative;
   z-index: 3;
   display: flex;
-  padding-left: 172px;
+  padding-left: 135px;
 `;
 
 const PhotoBox = styled.div`
@@ -143,6 +143,7 @@ const Photo = styled.img`
 
 const AboutDescriptionWrapper = styled.div`
   padding-top: 70px;
+  margin-left: -35px;
 `
 
 const AboutDescription = styled.div`
@@ -151,7 +152,6 @@ const AboutDescription = styled.div`
   padding: 0 63px 63px 63px;
   border-radius: 14px;
   max-height: min-content;
-  margin-left: -20px;
 `
 
 

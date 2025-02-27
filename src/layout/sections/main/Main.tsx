@@ -48,7 +48,7 @@ export const Main = () => {
             <StyleMainSkill $inset={'18% auto auto 15%'}>SC</StyleMainSkill>
             <StyleMainSkill $inset={'auto auto 45% 0'}>JS</StyleMainSkill>
             <StyleMainSkill $inset={'auto auto 20% 3%'}>&lt;/</StyleMainSkill>
-            <StyleMainSkill $inset={'8% 30% auto auto'}>TS</StyleMainSkill>
+            <StyleMainSkill $inset={'8% 40% auto auto'}>TS</StyleMainSkill>
             <Photo src={photo} />
           </ImageWrapper>
         </FlexWrapper>
@@ -64,7 +64,6 @@ const StyledMain = styled.div`
 
 const MainContent = styled.div`
   max-width: 447px;
-
 `;
 
 const StyledGreeting = styled.span`
