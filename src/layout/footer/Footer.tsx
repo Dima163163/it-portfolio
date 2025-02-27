@@ -40,9 +40,9 @@ export const Footer = () => {
               <Logo />
               <BtnEllipse as={'a'} href='#top'>
                 <Icon
-                  width='35'
-                  height='35'
-                  viewBox='0 0 35 35'
+                  width='36'
+                  height='36'
+                  viewBox='0 0 36 36'
                   iconId='arrowTop'
                 />
               </BtnEllipse>
