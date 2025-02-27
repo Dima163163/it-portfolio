@@ -27,6 +27,5 @@ function App() {
 export default App;
 
 const StyledMain = styled.main`
-  padding-top: 100px;
-    background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
 `;

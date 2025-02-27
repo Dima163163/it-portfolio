@@ -60,6 +60,7 @@ export const Main = () => {
 const StyledMain = styled.div`
   background-color: #1f1f1f;
   overflow: hidden;
+  padding-top: 100px;
 `;
 
 const MainContent = styled.div`
