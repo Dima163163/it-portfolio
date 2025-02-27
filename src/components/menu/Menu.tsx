@@ -33,4 +33,8 @@ const StyledMenu = styled.ul<StyledMenuPropsType>`
   a {
     color: #e4e4e4;
   }
+
+  a:hover {
+    color: #e2a300;
+  }
 `;

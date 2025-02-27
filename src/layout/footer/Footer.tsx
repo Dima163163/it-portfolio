@@ -18,17 +18,16 @@ export const Footer = () => {
             <FooterTitle>Contact:</FooterTitle>
             <FooterList>
               <FooterItem>
-                Inst:
-                <FooterLink href='#'>notitanic33</FooterLink>
+                Inst: <FooterLink href='#'>notitanic33</FooterLink>
               </FooterItem>
               <FooterItem>
-                Email:
+                Email:{' '}
                 <FooterLink href='mailto:Email: notitanic33@gmail.com'>
                   notitanic33@gmail.com
                 </FooterLink>
               </FooterItem>
               <FooterItem>
-                Calls:
+                Calls:{' '}
                 <FooterLink href='tel:+79001215454'>
                   +7 (900) - 121 - 54 -54
                 </FooterLink>
@@ -98,6 +97,9 @@ const FooterLink = styled.a`
   font-weight: 300;
   font-size: 18px;
   color: #fff;
+  &:hover {
+    color: #e2a300
+  }
 `;
 
 const FooterBox = styled.div`
