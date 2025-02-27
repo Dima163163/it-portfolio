@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Icon } from '../icon/Icon';
 import { Slides } from './slides/Slides';
-import { BtnEllipse } from '../btnEllips/BtnEllips';
+import { BtnEllipse } from '../btnEllipse/BtnEllipse';
 
 export const Slider = () => {
   return (

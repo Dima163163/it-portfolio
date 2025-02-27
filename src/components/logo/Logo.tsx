@@ -16,4 +16,7 @@ const StyledLogo = styled.a`
   gap: 10px;
   align-items: center;
   color: #fff;
+  font-family: 'Nico Moji', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 `

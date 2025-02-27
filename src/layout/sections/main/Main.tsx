@@ -2,78 +2,120 @@ import { Button } from '../../../components/button/Button';
 import photo from '../../../assets/images/photo.png';
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
-import { Ellips } from '../../../components/ellips/Ellips';
+import { Ellipse } from '../../../components/ellipse/Ellipse';
+import { Container } from '../../../components/container/Container';
 
 type StyleMainSkillPropsType = {
-  $inset?: string
-}
+  $inset?: string;
+};
 
 export const Main = () => {
   return (
-    <StyledMain>
-      <FlexWrapper $align='center' $justify='space-between'>
-        <div>
-          <StyledGreeting>Hello</StyledGreeting>
-          <Name>I’m Dmitry Khlopov</Name>
-          <MainTitle>
-            I've been doing front-end development for a
-            year now. Do you need a site layout, or maybe a
-            turnkey website? Then contact me
-          </MainTitle>
-          <Button>Contact me</Button>
-        </div>
-        <ImageWrapper>
-          <Ellips
-          $width='575px'
-          $height='575px'
-          $boxshadowcolor='0 4px 70px 0 rgba(0, 196, 240, 0.42)'
-          $inset='auto 0 0 auto'
-        >
-          <svg viewBox="150 150 575 575" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="439.5" cy="439.972" r="254" stroke="#00C4F0" strokeWidth="67" shapeRendering="crispEdges" />
-          </svg>
-        </Ellips>
-          <StyleMainSkill $inset={'0 auto auto 0'}>Ps</StyleMainSkill>
-          <StyleMainSkill $inset={'auto 0 0 auto'}>Ux</StyleMainSkill>
-          <StyleMainSkill $inset={'auto auto 0 0'}>&lt;/</StyleMainSkill>
-          <StyleMainSkill $inset={'0 0 auto auto'}>UI</StyleMainSkill>
-          <Photo src={photo} />
-        </ImageWrapper>
-      </FlexWrapper>
+    <StyledMain id={'top'}>
+      <Container>
+        <FlexWrapper $align={'center'} $justify={'space-between'} $gap={'30px'} $wrap={'wrap'}>
+          <MainContent>
+            <StyledGreeting>Hello</StyledGreeting>
+            <Name>I’m Dmitry Khlopov</Name>
+            <MainTitle>
+              I've been doing front-end development for a year now. Do you need
+              a site layout, or maybe a turnkey website? Then contact me
+            </MainTitle>
+            <Button>Contact me</Button>
+          </MainContent>
+          <ImageWrapper>
+            <Ellipse
+              $width='575px'
+              $height='575px'
+              $boxshadowcolor='0 4px 70px 0 rgba(0, 196, 240, 0.42)'
+              $inset='auto 0 0 auto'
+            >
+              <svg
+                viewBox='152 152 575 575'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <circle
+                  cx='439.5'
+                  cy='439.972'
+                  r='254'
+                  stroke='#00C4F0'
+                  strokeWidth='67'
+                  shapeRendering='crispEdges'
+                />
+              </svg>
+            </Ellipse>
+            <StyleMainSkill $inset={'18% auto auto 15%'}>SC</StyleMainSkill>
+            <StyleMainSkill $inset={'auto auto 45% 0'}>JS</StyleMainSkill>
+            <StyleMainSkill $inset={'auto auto 20% 3%'}>&lt;/</StyleMainSkill>
+            <StyleMainSkill $inset={'8% 30% auto auto'}>TS</StyleMainSkill>
+            <Photo src={photo} />
+          </ImageWrapper>
+        </FlexWrapper>
+      </Container>
     </StyledMain>
   );
 };
 
-const StyledGreeting = styled.span`
-  
-`
-
 const StyledMain = styled.div`
-  background-color: #2A2A2A;
+  background-color: #1f1f1f;
+  overflow: hidden;
+`;
+
+const MainContent = styled.div`
+  max-width: 447px;
+
+`;
+
+const StyledGreeting = styled.span`
+  font-family: "NEXT ART", sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  color: #e4e4e4;
+  margin-bottom: 27px;
+`;
+
+const Name = styled.span`
+  display: block;
+  font-family: "NEXT ART", sans-serif;
+  font-weight: 700;
+  font-size: 72px;
+  color: #e4e4e4;
+  margin-bottom: 27px;
+`;
+
+const MainTitle = styled.h1`
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  color: #e4e4e4;
+  margin-bottom: 27px;
+  max-width: 430px;
 `;
 
 const Photo = styled.img`
-  width: 530px;
-  height: 600px;
+  width: 84%;
   object-fit: cover;
   position: relative;
   z-index: 2;
 `;
 
-const MainTitle = styled.h1`
-  display: block;
-`;
-
-const Name = styled.span`
-  display: block;
-`;
 
 const ImageWrapper = styled.div`
   position: relative;
-  min-width: 575px;
+  min-width: 632px;
+  height: 674px;
+  margin-right: -32px;
+
+  img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 `;
 
 const StyleMainSkill = styled.div<StyleMainSkillPropsType>`
+font-family: "NEXT ART", sans-serif;
   border-radius: 100%;
   width: 90px;
   height: 90px;
@@ -87,5 +129,5 @@ const StyleMainSkill = styled.div<StyleMainSkillPropsType>`
   align-items: center;
   position: absolute;
   z-index: 3;
-  inset: ${props => props.$inset || 'auto'};
-`
+  inset: ${(props) => props.$inset || 'auto'};
+`;

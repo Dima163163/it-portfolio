@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import { Skill } from './skill/Skill';
+import { SectionTitle } from '../../../components/sectionTilte/SectionTitle';
+import { Container } from '../../../components/container/Container';
 type SkillItemPropsType = {
   iconId?: string
   text?: string
@@ -32,7 +34,7 @@ const skillsArr:SkillsArrPropsType = [
   },
   {
     iconId: 'js',
-    title:'Icon Design',
+    title:'JavaScript',
     width: '120',
     height:'120',
     viewBox:'0 0 120 120',
@@ -48,7 +50,7 @@ const skillsArr:SkillsArrPropsType = [
   },
   {
     iconId: 'styledComponents',
-    title:'StyledComponents',
+    title:'Styled Components',
     width: '120',
     height:'120',
     viewBox:'0 0 120 120',
@@ -115,20 +117,26 @@ const skillsArr:SkillsArrPropsType = [
 export const Skills = () => {
   return (
     <StyledSkills>
-      <FlexWrapper $wrap={'wrap'} $justify={'space-between'}>
-        {
-          skillsArr.length > 0 && skillsArr.map((item, i) => {
-            if (item.iconId) {
-              return <Skill key={i} iconId={item.iconId} title={item.title} width={item.width} height={item.height} viewBox={item.viewBox} gap={item.gap} />
+      <Container>
+        <SectionTitle>My Skills</SectionTitle>
+        <FlexWrapper $wrap={'wrap'} $gap={'30px'}>
+          {
+            skillsArr.length > 0 && skillsArr.map((item, i) => {
+              if (item.iconId) {
+                return <Skill key={i} iconId={item.iconId} title={item.title} width={item.width} height={item.height} viewBox={item.viewBox} gap={item.gap} />
+              }
+              return <Skill key={i} text={item.text} title={item.title} width={item.width} height={item.height} viewBox={item.viewBox} gap={item.gap} />
             }
-            return <Skill key={i} text={item.text} title={item.title} width={item.width} height={item.height} viewBox={item.viewBox} gap={item.gap} />
+            )
           }
-          )
-        }
-      </FlexWrapper>
+        </FlexWrapper>
+      </Container>
     </StyledSkills>
   )
 };
 
 const StyledSkills = styled.section`
+  padding: 50px 0;
+  text-align: center;
 `;
+

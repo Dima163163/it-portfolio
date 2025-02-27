@@ -8,7 +8,7 @@ type EllipsPropsType = {
 };
 
 
-export const Ellips = styled.div<EllipsPropsType>`
+export const Ellipse = styled.div<EllipsPropsType>`
   position: absolute;
   width: ${props => props.$width ||'356px'};
   height: ${props => props.$height ||'356px'};;

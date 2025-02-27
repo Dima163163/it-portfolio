@@ -9,8 +9,13 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     color: #e4e4e4;
+    font-family: 'Arodora Pro', sans-serif;
   }
 
   a {

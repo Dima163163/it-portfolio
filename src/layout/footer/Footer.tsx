@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../../components/flexWrapper/FlexWrapper';
 import { Menu } from '../../components/menu/Menu';
 import { Logo } from '../../components/logo/Logo';
-import { BtnEllipse } from '../../components/btnEllips/BtnEllips';
+import { BtnEllipse } from '../../components/btnEllipse/BtnEllipse';
 import { Icon } from '../../components/icon/Icon';
 
 const items = ['Home', 'About me', 'Portfolio', 'Contact'];
@@ -37,7 +37,7 @@ export const Footer = () => {
       <FlexWrapper $direction={'column'}>
         <FooterBox>
           <Logo />
-          <BtnEllipse>
+          <BtnEllipse as={'a'} href='#top'>
             <Icon
               width='35'
               height='35'
@@ -53,7 +53,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
+  background-color: #1f1f1f;
   display: flex;
 `;
 
