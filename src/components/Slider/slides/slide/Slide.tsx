@@ -83,7 +83,19 @@ const Link = styled.a`
   display: block;
   color: #e2a100;
   cursor: pointer;
+
+  svg {
+    stroke:#E2A100;
+  }
+
   span {
     margin-right: 7px;
+  }
+
+  &:hover {
+    color: #fff;
+    svg {
+      stroke:#fff;
+    }
   }
 `;
