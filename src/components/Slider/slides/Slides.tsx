@@ -9,7 +9,7 @@ type SlidePropType = {
 
 type SlidesPropsType = {
   slides: SlidePropType[]
-  idActiveSlide: number
+  idactiveslide: number
 }
 
 
@@ -17,7 +17,7 @@ export const Slides = (props: SlidesPropsType) => {
   return (
     <StyledSlides>
       {props.slides.length > 0 && props.slides.map((slide, i) => (
-        <Slide key={i} title={slide.title} text={slide.text} src={slide.src} idActiveSlide={props.idActiveSlide} />
+        <Slide key={i} title={slide.title} text={slide.text} src={slide.src} idactiveslide={props.idactiveslide} />
       ))}
     </StyledSlides>
   )

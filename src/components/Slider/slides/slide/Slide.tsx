@@ -5,16 +5,16 @@ type SlidePropsType = {
   title: string;
   text: string;
   src: string;
-  idActiveSlide: number
+  idactiveslide: number
 };
 
 type StyledSlidePropsType = {
-  idActiveSlide: number
+  $idactiveslide: number
 }
 
 export const Slide = (props: SlidePropsType) => {
   return (
-    <StyledSlide idActiveSlide={props.idActiveSlide}>
+    <StyledSlide $idactiveslide={props.idactiveslide}>
       <StyledImage src={props.src} />
       <SlideContent>
         <Title>{props.title}</Title>
@@ -38,7 +38,7 @@ const StyledSlide = styled.div<StyledSlidePropsType>`
   box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 0.28);
   background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
   border-radius: 29px;
-  transform: translateX(${props => props.idActiveSlide * -100}%);
+  transform: translateX(${props => props.$idactiveslide * -100}%);
   transition: 0.6s all;
 `;
 

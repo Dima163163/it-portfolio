@@ -47,7 +47,7 @@ export const Slider = () => {
       <BtnEllipse onClick={changePrevSlide}>
         <Icon width='35' height='35' viewBox='0 0 35 35' iconId='arrowLeft'/>
       </BtnEllipse>
-      <Slides slides={slides} idActiveSlide={idActiveSlide}/>
+      <Slides slides={slides} idactiveslide={idActiveSlide}/>
       <BtnEllipse onClick={changeNextSlide}>
         <Icon width='35' height='35' viewBox='0 0 35 35' iconId='arrowRight'/>
       </BtnEllipse>
