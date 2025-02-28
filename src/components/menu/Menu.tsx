@@ -18,7 +18,7 @@ export const Menu = (props: menuPropsType) => {
       {props.menuItems.length > 0 &&
         props.menuItems.map((item, i) => (
           <li key={i}>
-            <a href=''>{item}</a>
+            <a href={`#${item.toLowerCase()}`}>{item}</a>
           </li>
       ))}
     </StyledMenu>

@@ -5,7 +5,7 @@ import { Container } from '../../components/container/Container'
 
 export const Contacts = () => {
   return (
-    <StyledContacts>
+    <StyledContacts id={'contact'}>
       <Container>
           <SectionTitle>Contact</SectionTitle>
           <StyledForm>

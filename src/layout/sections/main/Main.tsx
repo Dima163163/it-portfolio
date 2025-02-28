@@ -11,7 +11,7 @@ type StyleMainSkillPropsType = {
 
 export const Main = () => {
   return (
-    <StyledMain id={'top'}>
+    <StyledMain id={'main'}>
       <Container>
         <FlexWrapper $align={'center'} $justify={'space-between'} $gap={'30px'} $wrap={'wrap'}>
           <MainContent>

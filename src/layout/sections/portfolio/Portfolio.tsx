@@ -5,7 +5,7 @@ import { Container } from '../../../components/container/Container';
 
 export const Portfolio = () => {
   return (
-    <StyledPortfolio>
+    <StyledPortfolio id={'portfolio'}>
       <Container>
         <SectionTitle>Portfolio</SectionTitle>
         <Slider/>

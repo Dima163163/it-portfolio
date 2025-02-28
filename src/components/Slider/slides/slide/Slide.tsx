@@ -1,18 +1,21 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Icon } from '../../../icon/Icon';
 
 type SlidePropsType = {
   title: string;
   text: string;
   src: string;
+  idActiveSlide: number
 };
+
+type StyledSlidePropsType = {
+  idActiveSlide: number
+}
 
 export const Slide = (props: SlidePropsType) => {
   return (
-    <StyledSlide>
-      <StyledImageWrapper>
-        <Image src={props.src} />
-      </StyledImageWrapper>
+    <StyledSlide idActiveSlide={props.idActiveSlide}>
+      <StyledImage src={props.src} />
       <SlideContent>
         <Title>{props.title}</Title>
         <Text>{props.text}</Text>
@@ -25,7 +28,8 @@ export const Slide = (props: SlidePropsType) => {
   );
 };
 
-const StyledSlide = styled.div`
+
+const StyledSlide = styled.div<StyledSlidePropsType>`
   display: flex;
   justify-content: space-between;
   min-width: 100%;
@@ -33,25 +37,30 @@ const StyledSlide = styled.div`
   gap: 30px;
   box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 0.28);
   background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
-  border-radius: 29px
+  border-radius: 29px;
+  transform: translateX(${props => props.idActiveSlide * -100}%);
+  transition: 0.6s all;
 `;
 
-const StyledImageWrapper = styled.div`
+type StyledImagePropsType = {
+  src: string;
+};
+
+const StyledImage = styled.div<StyledImagePropsType>`
   min-width: 493px;
   height: 500px;
   overflow: hidden;
   position: relative;
   border-radius: 29px;
-`;
-
-const Image = styled.img`
-  position: absolute;
-  left: -70px;
+  background-image: url(${(props) => props.src});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 15%;
 `;
 
 const SlideContent = styled.div`
   padding-top: 42px;
-`
+`;
 
 const Title = styled.h4`
   font-family: 'Arodora Pro', sans-serif;

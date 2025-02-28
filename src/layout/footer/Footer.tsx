@@ -37,7 +37,7 @@ export const Footer = () => {
           <FlexWrapper $direction={'column'} $justify={'space-between'}>
             <FooterBox>
               <Logo />
-              <BtnEllipse as={'a'} href='#top'>
+              <BtnEllipse as={'a'} href='#main'>
                 <Icon
                   width='36'
                   height='36'

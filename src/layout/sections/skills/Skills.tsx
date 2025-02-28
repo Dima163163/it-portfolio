@@ -116,7 +116,7 @@ const skillsArr:SkillsArrPropsType = [
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <StyledSkills id={'skills'}>
       <Container>
         <SectionTitle>My Skills</SectionTitle>
         <FlexWrapper $wrap={'wrap'} $gap={'30px'}>

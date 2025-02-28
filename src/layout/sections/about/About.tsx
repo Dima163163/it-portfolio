@@ -9,7 +9,7 @@ import { SectionTitle } from '../../../components/sectionTilte/SectionTitle';
 
 export const About = () => {
   return (
-    <StyledAbout>
+    <StyledAbout id={'about me'}>
       <Container>
         <StyledAboutWrapper>
           <Ellipse
@@ -59,9 +59,9 @@ export const About = () => {
               <AboutDescription>
                 <SectionTitle $padding={'0 0 36px 0'} $margin={'-30px 0 0 0'}>About me</SectionTitle>
                 <AboutText>
-                  Hello again everyone! So, you already know that my name is Gleb. A
-                  little about myself: 35 y.o., athlete-football player, I
-                  love creativity since childhood, I live in Samara, Russia. Why
+                  Hello again everyone! So, you already know that my name is Dima. A
+                  little about myself: 35 y.o., like playing football. I
+                  love creativity since childhood. I live in Samara, Russia. Why
                   programming? Everything is elementary - I like it, the profession
                   of the future, thanks to which I can provide myself and fulfill my
                   dream - travel, at the moment I specialize in 
