@@ -76,7 +76,7 @@ const StyledGreeting = styled.span`
 `;
 
 const Name = styled.span`
-  display: block;
+  display: inline-block;
   font-family: "NEXT ART", sans-serif;
   font-weight: 700;
   font-size: 72px;
@@ -85,7 +85,6 @@ const Name = styled.span`
 `;
 
 const MainTitle = styled.h1`
-  display: block;
   font-weight: 300;
   font-size: 18px;
   color: #e4e4e4;
