@@ -11,6 +11,7 @@ export const Contacts = () => {
           <StyledForm>
             <Field placeholder={"name"} name={"name"}/>
             <Field placeholder={"subject"} name={"subject"} />
+            <Field placeholder={"email"} name={"email"} type={"email"}/>
             <Field as={"textarea"} placeholder={"message"} name={"message"}/>
             <Button type="submit">Send message</Button>
           </StyledForm>

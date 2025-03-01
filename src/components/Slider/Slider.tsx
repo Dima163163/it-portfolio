@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
 import { Slides } from './slides/Slides';
 import { BtnEllipse } from '../btnEllipse/BtnEllipse';
@@ -20,45 +20,42 @@ const slides = [
     title: 'Landing Ice-cream3333',
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci eu elit consequat posuere ut sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam euismod egestas mauris nec mollis. Phasellus efficitur et ex vel condimentum. Cras enim purus, tempor sed massa vel, accumsan bibendum magna. Nullam hendrerit cursus purus, sit amet viverra arcu gravida vel.',
     src: portfolioImage
-  },
-]
+  }
+];
 
 export const Slider = () => {
   const [idActiveSlide, setIdActiveSlide] = useState(0);
 
-
   const changeNextSlide = () => {
     if (idActiveSlide < slides.length - 1) {
       setIdActiveSlide((prevSlide) => prevSlide + 1);
-      console.log(idActiveSlide)
     }
   };
 
   const changePrevSlide = () => {
     if (idActiveSlide > 0) {
       setIdActiveSlide((prevSlide) => prevSlide - 1);
-      console.log(idActiveSlide)
     }
   };
 
-
   return (
     <StyledSlider>
-      <BtnEllipse onClick={changePrevSlide}>
-        <Icon width='35' height='35' viewBox='0 0 35 35' iconId='arrowLeft'/>
+      <BtnEllipse onClick={changePrevSlide} disabled={idActiveSlide === 0}>
+        <Icon width='35' height='35' viewBox='0 0 35 35' iconId='arrowLeft' />
       </BtnEllipse>
-      <Slides slides={slides} idactiveslide={idActiveSlide}/>
-      <BtnEllipse onClick={changeNextSlide}>
-        <Icon width='35' height='35' viewBox='0 0 35 35' iconId='arrowRight'/>
+      <Slides slides={slides} idactiveslide={idActiveSlide} />
+      <BtnEllipse
+        onClick={changeNextSlide}
+        disabled={idActiveSlide === slides.length - 1}
+      >
+        <Icon width='35' height='35' viewBox='0 0 35 35' iconId='arrowRight' />
       </BtnEllipse>
     </StyledSlider>
-  )
-}
+  );
+};
 
 const StyledSlider = styled.div`
   display: flex;
   gap: 40px;
   align-items: center;
 `;
-
-

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Icon } from '../../../icon/Icon';
 
 type SlidePropsType = {
@@ -21,7 +21,7 @@ export const Slide = (props: SlidePropsType) => {
         <Text>{props.text}</Text>
         <Link>
           <span>More</span>
-          <Icon width='14' height='10' viewBox='0 0 14 10' iconId='btnArrow' />
+          <Icon width='14' height='10' viewBox='2 1 14 10' iconId='btnArrow' />
         </Link>
       </SlideContent>
     </StyledSlide>

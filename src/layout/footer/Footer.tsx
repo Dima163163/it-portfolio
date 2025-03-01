@@ -18,18 +18,18 @@ export const Footer = () => {
             <FooterTitle>Contact:</FooterTitle>
             <FooterList>
               <FooterItem>
-                Inst: <FooterLink href='#'>notitanic33</FooterLink>
+                Inst: <FooterLink href='#'>timdim</FooterLink>
               </FooterItem>
               <FooterItem>
                 Email:{' '}
                 <FooterLink href='mailto:Email: notitanic33@gmail.com'>
-                  notitanic33@gmail.com
+                  timdim@gmail.com
                 </FooterLink>
               </FooterItem>
               <FooterItem>
                 Calls:{' '}
-                <FooterLink href='tel:+79001215454'>
-                  +7 (900) - 121 - 54 -54
+                <FooterLink href='tel:+78467777777'>
+                  +7 (846) - 777 - 77 -77
                 </FooterLink>
               </FooterItem>
             </FooterList>
@@ -47,7 +47,7 @@ export const Footer = () => {
               </BtnEllipse>
             </FooterBox>
             <CopyrightWrapper>
-              <Copyright>Copyright &nbsp; 2021, Notitanic</Copyright>
+              <Copyright>Copyright &nbsp; 2021, TimDim</Copyright>
             </CopyrightWrapper>
           </FlexWrapper>
         </FooterContent>

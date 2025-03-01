@@ -16,4 +16,9 @@ export const BtnEllipse = styled.button`
     background: transparent;
     border-color: #e29500;
   }
+
+  &:disabled {
+    background: #937732;
+    pointer-events: none;
+  }
 `

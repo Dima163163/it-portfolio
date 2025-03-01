@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <StyledLogo href='/'>
       <Icon iconId={"logoSvg"} width='65' height='48' viewBox='0 0 65 48'/>
-      Notitanic
+      TimDim
     </StyledLogo>
   );
 };
