@@ -1,31 +1,32 @@
-import styled from 'styled-components'
-import { SectionTitle } from '../../components/sectionTilte/SectionTitle'
-import { Button } from '../../components/button/Button'
-import { Container } from '../../components/container/Container'
+import styled from 'styled-components';
+import { SectionTitle } from '../../components/sectionTilte/SectionTitle';
+import { Button } from '../../components/button/Button';
+import { Container } from '../../components/container/Container';
+import { theme } from '../../styles/Theme';
 
 export const Contacts = () => {
   return (
     <StyledContacts id={'contact'}>
       <Container>
-          <SectionTitle>Contact</SectionTitle>
-          <StyledForm>
-            <Field placeholder={"name"} name={"name"}/>
-            <Field placeholder={"subject"} name={"subject"} />
-            <Field placeholder={"email"} name={"email"} type={"email"}/>
-            <Field as={"textarea"} placeholder={"message"} name={"message"}/>
-            <Button type="submit">Send message</Button>
-          </StyledForm>
+        <SectionTitle>Contact</SectionTitle>
+        <StyledForm>
+          <Field placeholder={'Name'} name={'name'} />
+          <Field placeholder={'Subject'} name={'subject'} />
+          <Field placeholder={'Email'} name={'email'} type={'email'} />
+          <Field as={'textarea'} placeholder={'Message'} name={'message'} />
+          <Button type='submit'>Send message</Button>
+        </StyledForm>
       </Container>
     </StyledContacts>
-  )
-}
-
+  );
+};
 
 const StyledContacts = styled.section`
-  background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
   text-align: center;
   padding: 100px 0;
-`
+`;
+
 
 const StyledForm = styled.form`
   margin: 0 auto;
@@ -36,31 +37,34 @@ const StyledForm = styled.form`
   align-items: center;
   gap: 15px;
 
-  button {
+  ${Button} {
     width: 300px;
   }
 
   textarea {
+    resize: none;
     margin-bottom: 50px;
   }
 `;
 
-const Field= styled.input`
+const Field = styled.input`
   outline: 0;
   appearance: none;
-  border: 2px solid #2d2d2d;
+  font-family: 'Arodora Pro', sans-serif;
+  border: 2px solid ${theme.colors.thirdBg};
   height: 60px;
   border-radius: 14px;
   padding: 15px;
-  background-color: #1d1d1d;
-  color: #fff;
-  resize: none;
+  background-color: ${theme.colors.primaryBg};
+  color: ${theme.colors.fontColorSecond};
   font-size: 20px;
-  max-width: 500px;
   width: 100%;
 
-
   &::placeholder {
-      color: #fff;
+    color: ${theme.colors.fontColorSecond};
+  }
+
+  &:focus-visible {
+    border: 1px solid ${theme.colors.borderInput};
   }
 `;

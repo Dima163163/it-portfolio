@@ -140,21 +140,21 @@
   </g>
 
   <g id="arrowLeft">
-    <path d="M16.5 7.5L6 18L16.5 28.5" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M6 18H30" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M16.5 7.5L6 18L16.5 28.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M6 18H30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 
   <g id="arrowRight">
-    <path d="M19.5 7.5L30 18L19.5 28.5" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M30 18H6" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M19.5 7.5L30 18L19.5 28.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M30 18H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 
   <g id="btnArrow">
-    <path d="M0 5H13M13 5L10.0286 9M13 5L10.0286 1" />
+  <path d="M0 5H13M13 5L10.0286 9M13 5L10.0286 1" stroke="currentColor"/>
   </g>
 
   <g id="arrowTop">
-    <path d="M28.5 16.5L18 6L7.5 16.5" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M18 6L18 30" stroke="#E4E4E4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M28.5 16.5L18 6L7.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M18 6L18 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 </svg>

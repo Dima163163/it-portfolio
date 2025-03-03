@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 import { Icon } from '../../../icon/Icon';
+import { theme } from '../../../../styles/Theme';
 
 type SlidePropsType = {
   title: string;
   text: string;
   src: string;
-  idactiveslide: number
+  idactiveslide: number;
 };
 
 type StyledSlidePropsType = {
-  $idactiveslide: number
-}
+  $idactiveslide: number;
+};
 
 export const Slide = (props: SlidePropsType) => {
   return (
@@ -28,7 +29,6 @@ export const Slide = (props: SlidePropsType) => {
   );
 };
 
-
 const StyledSlide = styled.div<StyledSlidePropsType>`
   display: flex;
   justify-content: space-between;
@@ -36,9 +36,11 @@ const StyledSlide = styled.div<StyledSlidePropsType>`
   padding: 50px;
   gap: 30px;
   box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 0.28);
-  background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${
+  theme.colors.thirdBg
+} 100%);
   border-radius: 29px;
-  transform: translateX(${props => props.$idactiveslide * -100}%);
+  transform: translateX(${(props) => props.$idactiveslide * -100}%);
   transition: 0.6s all;
 `;
 
@@ -63,29 +65,27 @@ const SlideContent = styled.div`
 `;
 
 const Title = styled.h4`
-  font-family: 'Arodora Pro', sans-serif;
   font-weight: 300;
   font-size: 24px;
-  color: #fff;
+  color: ${theme.colors.fontColorSecond};
   margin-bottom: 25px;
 `;
 
 const Text = styled.p`
-  font-family: 'Arodora Pro', sans-serif;
   font-weight: 300;
   font-size: 18px;
-  color: #fff;
+  color: ${theme.colors.fontColorSecond};
   max-width: 290px;
   margin-bottom: 25px;
 `;
 
 const Link = styled.a`
   display: block;
-  color: #e2a100;
+  color: ${theme.colors.firstBgBtn};
   cursor: pointer;
 
   svg {
-    stroke:#E2A100;
+    stroke:${theme.colors.firstBgBtn};
   }
 
   span {
@@ -93,9 +93,9 @@ const Link = styled.a`
   }
 
   &:hover {
-    color: #fff;
+    color: ${theme.colors.fontColorSecond};
     svg {
-      stroke:#fff;
+      stroke:${theme.colors.fontColorSecond};
     }
   }
 `;

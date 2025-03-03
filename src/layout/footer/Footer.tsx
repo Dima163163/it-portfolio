@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { FlexWrapper } from '../../components/flexWrapper/FlexWrapper';
-import { Menu } from '../../components/menu/Menu';
 import { Logo } from '../../components/logo/Logo';
 import { BtnEllipse } from '../../components/btnEllipse/BtnEllipse';
 import { Icon } from '../../components/icon/Icon';
 import { Container } from '../../components/container/Container';
+import { theme } from '../../styles/Theme';
+import { FooterMenu } from './footerMenu/FooterMenu';
 
 const items = ['Home', 'About me', 'Portfolio', 'Contact'];
 
@@ -13,7 +14,7 @@ export const Footer = () => {
     <StyledFooter>
       <Container>
         <FooterContent>
-          <Menu menuItems={items} direction='column' gap={'18px'} />
+          <FooterMenu  menuItems={items} />
           <FlexWrapper $direction='column'>
             <FooterTitle>Contact:</FooterTitle>
             <FooterList>
@@ -29,12 +30,12 @@ export const Footer = () => {
               <FooterItem>
                 Calls:{' '}
                 <FooterLink href='tel:+78467777777'>
-                  +7 (846) - 777 - 77 -77
+                  +7 (846) - 777 - 77 - 77
                 </FooterLink>
               </FooterItem>
             </FooterList>
           </FlexWrapper>
-          <FlexWrapper $direction={'column'} $justify={'space-between'}>
+          <FlexWrapper $direction={'column'} $justify={'space-between'} $gap={'55px'}>
             <FooterBox>
               <Logo />
               <BtnEllipse as={'a'} href='#main'>
@@ -57,27 +58,15 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: #1f1f1f;
+  background-color: ${theme.colors.primaryBg};
   padding: 50px 0;
 `;
 
-const FooterContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  max-width: 773px;
-  width: 100%;
-  margin: 0 auto;
-  a {
-    font-size: 18px;
-    font-weight: 300;
-    color: #fff;
-  }
-`;
 
 const FooterTitle = styled.h4`
   font-weight: 300;
   font-size: 18px;
-  color: #fff;
+  color: ${theme.colors.fontColorSecond};
   margin-bottom: 18px;
 `;
 
@@ -90,16 +79,13 @@ const FooterList = styled.ul`
 const FooterItem = styled.li`
   font-weight: 300;
   font-size: 18px;
-  color: #fff;
+  color: ${theme.colors.fontColorSecond};
 `;
 
 const FooterLink = styled.a`
   font-weight: 300;
   font-size: 18px;
-  color: #fff;
-  &:hover {
-    color: #e2a300
-  }
+  color: ${theme.colors.fontColorSecond};
 `;
 
 const FooterBox = styled.div`
@@ -114,6 +100,25 @@ const CopyrightWrapper = styled.div`
 const Copyright = styled.span`
   font-weight: 300;
   font-size: 18px;
-  color: #fff;
+  color: ${theme.colors.fontColorSecond};
   display: inline-block;
+`;
+
+
+const FooterContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  max-width: 773px;
+  width: 100%;
+  margin: 0 auto;
+
+  ${FooterLink} {
+    font-size: 18px;
+    font-weight: 300;
+    color: ${theme.colors.fontColorSecond};
+
+    &:hover {
+      color: ${theme.colors.firstBgBtn}
+    }
+  }
 `;

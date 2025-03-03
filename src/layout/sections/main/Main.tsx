@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import { Ellipse } from '../../../components/ellipse/Ellipse';
 import { Container } from '../../../components/container/Container';
+import { theme } from '../../../styles/Theme';
+import { TextAnimation } from '../../../styles/animations/Animations';
 
 type StyleMainSkillPropsType = {
   $inset?: string;
@@ -13,10 +15,18 @@ export const Main = () => {
   return (
     <StyledMain id={'main'}>
       <Container>
-        <FlexWrapper $align={'center'} $justify={'space-between'} $gap={'30px'} $wrap={'wrap'}>
+        <FlexWrapper
+          $align={'center'}
+          $justify={'space-between'}
+          $gap={'30px'}
+          $wrap={'wrap'}
+        >
           <MainContent>
             <StyledGreeting>Hello</StyledGreeting>
-            <Name>I’m Dmitry Khlopov</Name>
+            <NameWrapper>
+              <Name>I’m&nbsp;Dmitry</Name>
+              <Name>Khlopov</Name>
+            </NameWrapper>
             <MainTitle>
               I've been doing front-end development for a year now. Do you need
               a site layout, or maybe a turnkey website? Then contact me
@@ -25,8 +35,8 @@ export const Main = () => {
           </MainContent>
           <ImageWrapper>
             <Ellipse
-              $width='575px'
-              $height='575px'
+              $width='90%'
+              $height='auto'
               $boxshadowcolor='0 4px 70px 0 rgba(0, 196, 240, 0.42)'
               $inset='auto 0 0 auto'
             >
@@ -58,7 +68,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.div`
-  background-color: #1f1f1f;
+  background-color: ${theme.colors.primaryBg};
   overflow: hidden;
   padding-top: 100px;
 `;
@@ -71,34 +81,47 @@ const StyledGreeting = styled.span`
   font-family: "NEXT ART", sans-serif;
   font-weight: 600;
   font-size: 48px;
-  color: #e4e4e4;
+  color: ${theme.colors.fontColorFirst};
   margin-bottom: 27px;
 `;
 
-const Name = styled.span`
+const NameWrapper = styled.div`
   display: inline-block;
+  margin-bottom: 27px;
+`
+
+const Name = styled.div`
+  overflow: hidden;
+  max-width: fit-content;
   font-family: "NEXT ART", sans-serif;
   font-weight: 700;
   font-size: 72px;
-  color: #e4e4e4;
-  margin-bottom: 27px;
+  color: ${theme.colors.fontColorFirst};
+  &:first-child {
+    border-right: .15em solid ${theme.colors.fontColorFour};
+    animation: ${TextAnimation} 3s steps(25, end);
+  }
+  &:last-child {
+    border-right: .15em solid ${theme.colors.fontColorFour};
+    animation: ${TextAnimation} 3s steps(25, end);
+  }
 `;
 
 const MainTitle = styled.h1`
   font-weight: 300;
   font-size: 18px;
-  color: #e4e4e4;
+  color: ${theme.colors.fontColorFirst};
   margin-bottom: 27px;
   max-width: 430px;
 `;
 
 const Photo = styled.img`
   width: 84%;
+  height: auto;
   object-fit: cover;
   position: relative;
   z-index: 2;
 `;
-
 
 const ImageWrapper = styled.div`
   position: relative;
@@ -114,14 +137,16 @@ const ImageWrapper = styled.div`
 `;
 
 const StyleMainSkill = styled.div<StyleMainSkillPropsType>`
-font-family: "NEXT ART", sans-serif;
+  font-family: "NEXT ART", sans-serif;
   border-radius: 100%;
   width: 90px;
   height: 90px;
   font-weight: 700;
   font-size: 36px;
-  color: #00c4f0;
-  background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
+  color: ${theme.colors.ellipseColorFirst};
+  background: linear-gradient(135deg,
+  ${theme.colors.ellipseBgFirst} 0%,
+  ${theme.colors.ellipseBgSecond} 100%);
   text-transform: uppercase;
   display: flex;
   justify-content: center;

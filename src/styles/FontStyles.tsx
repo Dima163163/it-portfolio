@@ -19,7 +19,6 @@ import NicoMojiEot from '../fonts/NicoMoji.eot';
 import NicoMojiWoff from '../fonts/NicoMoji.woff';
 import NicoMojiWoff2 from '../fonts/NicoMoji.woff2';
 
-
 export const FontStyles = createGlobalStyle`
   @font-face {
     font-family: 'Arodore Pro';
@@ -65,4 +64,4 @@ export const FontStyles = createGlobalStyle`
     font-weight: 400;
     font-style: normal;
   }
-`
+`;

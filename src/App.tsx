@@ -7,6 +7,7 @@ import { Main } from './layout/sections/main/Main';
 import { Portfolio } from './layout/sections/portfolio/Portfolio';
 import { Contacts } from './layout/contacts/Contacts';
 import { Skills } from './layout/sections/skills/Skills';
+import { theme } from './styles/Theme';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Header />
       <StyledMain>
         <Main />
-        <Skills/>
+        <Skills />
         <About />
         <Portfolio />
         <Contacts />
@@ -27,5 +28,5 @@ function App() {
 export default App;
 
 const StyledMain = styled.main`
-  background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
+  background: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
 `;

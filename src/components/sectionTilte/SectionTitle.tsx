@@ -1,16 +1,17 @@
 import styled from 'styled-components';
+import { theme } from '../../styles/Theme';
 
 type SectionTitlePropsType = {
-  $padding?: string
-  $margin?: string
-}
+  $padding?: string;
+  $margin?: string;
+};
 
-export const SectionTitle= styled.h3<SectionTitlePropsType>`
+export const SectionTitle = styled.h3<SectionTitlePropsType>`
 display: inline-block;
   font-family: "NEXT ART", sans-serif;
   font-weight: 400;
   font-size: 48px;
-  color: #e4e4e4;
-  padding: ${props => props.$padding || '0 0 50px 0'};
-  margin: ${props => props.$margin || '0'};
-`
+  color: ${theme.colors.fontColorFirst};
+  padding: ${(props) => props.$padding || '0 0 50px 0'};
+  margin: ${(props) => props.$margin || '0'};
+`;

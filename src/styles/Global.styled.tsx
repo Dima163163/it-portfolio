@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './Theme';
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   *,
   *::after,
   *::before {
@@ -14,12 +15,15 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    color: #e4e4e4;
+    margin: 0;
+    color: ${theme.colors.fontColorFirst};
     font-family: 'Arodora Pro', sans-serif;
   }
 
   a {
     text-decoration: none;
+    color: ${theme.colors.fontColorFirst};
+    cursor: pointer;
   }
 
 
@@ -29,5 +33,6 @@ export const GlobalStyles = createGlobalStyle`
 
   button {
     border: none;
+    background-color: unset;
   }
-`
+`;
