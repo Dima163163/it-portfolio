@@ -36,7 +36,7 @@ const StyledSlide = styled.div<StyledSlidePropsType>`
   padding: 50px;
   gap: 30px;
   box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 0.28);
-  background: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${
+  background-image: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${
   theme.colors.thirdBg
 } 100%);
   border-radius: 29px;

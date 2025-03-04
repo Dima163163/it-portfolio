@@ -12,7 +12,7 @@ export const HeaderMenu = (props: HeaderMenuPropsType) => {
       <ul>
         {props.menuItems.length > 0 &&
           props.menuItems.map((item, i) => (
-            <ListItem key={i} typeItem='headerItem'>
+            <ListItem key={i} $typeItem='headerItem'>
               <Link href={`#${item.toLowerCase()}`}>{item}</Link>
             </ListItem>
           ))}

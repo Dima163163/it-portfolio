@@ -22,7 +22,6 @@ export const theme = {
     ellipseBgFirst: '#414141',
     ellipseBgSecond: '#2d2d2d',
 
-
     borderInput: '#e2a300',
   }
 }

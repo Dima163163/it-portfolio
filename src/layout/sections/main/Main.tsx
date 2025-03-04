@@ -5,7 +5,7 @@ import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import { Ellipse } from '../../../components/ellipse/Ellipse';
 import { Container } from '../../../components/container/Container';
 import { theme } from '../../../styles/Theme';
-import { TextAnimation } from '../../../styles/animations/Animations';
+import { AnimationBorderEffect, TextAnimation } from '../../../styles/animations/Animations';
 
 type StyleMainSkillPropsType = {
   $inset?: string;
@@ -13,7 +13,7 @@ type StyleMainSkillPropsType = {
 
 export const Main = () => {
   return (
-    <StyledMain id={'main'}>
+    <StyledMain id={'home'}>
       <Container>
         <FlexWrapper
           $align={'center'}
@@ -67,7 +67,7 @@ export const Main = () => {
   );
 };
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
   background-color: ${theme.colors.primaryBg};
   overflow: hidden;
   padding-top: 100px;
@@ -91,19 +91,24 @@ const NameWrapper = styled.div`
 `
 
 const Name = styled.div`
+  padding-right: 10px;
   overflow: hidden;
   max-width: fit-content;
   font-family: "NEXT ART", sans-serif;
   font-weight: 700;
   font-size: 72px;
   color: ${theme.colors.fontColorFirst};
+
   &:first-child {
     border-right: .15em solid ${theme.colors.fontColorFour};
-    animation: ${TextAnimation} 3s steps(25, end);
+    animation: ${TextAnimation} 3s steps(25, end),
+                ${AnimationBorderEffect} 0.7s infinite;
   }
+
   &:last-child {
     border-right: .15em solid ${theme.colors.fontColorFour};
-    animation: ${TextAnimation} 3s steps(25, end);
+    animation: ${TextAnimation} 3s steps(25, end),
+                ${AnimationBorderEffect} 0.7s infinite;;
   }
 `;
 
@@ -144,7 +149,7 @@ const StyleMainSkill = styled.div<StyleMainSkillPropsType>`
   font-weight: 700;
   font-size: 36px;
   color: ${theme.colors.ellipseColorFirst};
-  background: linear-gradient(135deg,
+  background-image: linear-gradient(135deg,
   ${theme.colors.ellipseBgFirst} 0%,
   ${theme.colors.ellipseBgSecond} 100%);
   text-transform: uppercase;

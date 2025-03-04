@@ -3,7 +3,7 @@ import { theme } from '../../styles/Theme';
 
 export const BtnEllipse = styled.button`
   border-radius: 100%;
-  background: linear-gradient(315deg, ${theme.colors.firstBgBtn} 0%, ${theme.colors.secondBgBtn} 100%);
+  background-image: linear-gradient(315deg, ${theme.colors.firstBgBtn} 0%, ${theme.colors.secondBgBtn} 100%);
   border: 2px solid transparent;
   min-width: 60px;
   height: 60px;

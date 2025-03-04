@@ -3,7 +3,7 @@ import { theme } from '../../styles/Theme';
 import { Link } from '../link/Link';
 
 type ListItemPropsType = {
-  typeItem?: string;
+  $typeItem?: string;
 };
 
 export const ListItem = styled.li<ListItemPropsType>`
@@ -14,7 +14,7 @@ export const ListItem = styled.li<ListItemPropsType>`
   }
 
   ${(props) =>
-    props.typeItem === 'headerItem' &&
+    props.$typeItem === 'headerItem' &&
     css`
     position: relative;
 

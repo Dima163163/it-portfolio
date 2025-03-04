@@ -28,5 +28,5 @@ function App() {
 export default App;
 
 const StyledMain = styled.main`
-  background: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
+  background-image: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
 `;

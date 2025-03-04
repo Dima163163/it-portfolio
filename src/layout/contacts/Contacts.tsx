@@ -22,7 +22,7 @@ export const Contacts = () => {
 };
 
 const StyledContacts = styled.section`
-  background: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
+  background-image: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
   text-align: center;
   padding: 100px 0;
 `;
