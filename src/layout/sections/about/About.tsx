@@ -16,7 +16,7 @@ export const About = () => {
           <Ellipse
             $width='792px'
             $height='792px'
-            $boxshadowcolor='0 4px 70px 0 rgba(255, 255, 255, 0.25)'
+            $boxshadow='0 4px 70px rgba(255, 255, 255, 0.25)'
             $inset='60px auto auto -100px'
           >
             <svg
@@ -37,7 +37,7 @@ export const About = () => {
           <Ellipse
             $width='356px'
             $height='356px'
-            $boxshadowcolor='0 4px 70px 0 rgba(226, 162, 0, 0.25)'
+            $boxshadow='0 4px 70px rgba(226, 162, 0, 0.25)'
             $inset='40px 60px auto auto'
           >
             <svg
@@ -58,7 +58,7 @@ export const About = () => {
           <Ellipse
             $width='486px'
             $height='486px'
-            $boxshadowcolor='0 4px 70px 0 rgba(0, 193, 236, 0.25)'
+            $boxshadow='0 4px 70px rgba(0, 193, 236, 0.25)'
             $inset='auto 75px 0 auto'
           >
             <svg
@@ -80,12 +80,12 @@ export const About = () => {
             <FlexWrapper $direction={'column'} $gap={'196px'}>
               <WrapperPhoto $width={'330px'} $height={'378px'}>
                 <BorderPhoto>
-                  <Photo src={photo1} />
+                  <Photo src={photo1} alt={photo1} />
                 </BorderPhoto>
               </WrapperPhoto>
               <WrapperPhoto $width={'307px'} $height={'339px'}>
                 <BorderPhoto>
-                  <Photo src={photo2} />
+                  <Photo src={photo2} alt={photo2} />
                 </BorderPhoto>
               </WrapperPhoto>
             </FlexWrapper>
@@ -117,7 +117,7 @@ export const About = () => {
             <PhotoBox>
               <WrapperPhoto $width={'340px'} $height={'465px'}>
                 <BorderPhoto>
-                  <Photo src={photo3} />
+                  <Photo src={photo3} alt={photo3} />
                 </BorderPhoto>
               </WrapperPhoto>
             </PhotoBox>

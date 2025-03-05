@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ListItem } from '../../../components/listItem/ListItem';
+import { MenuItem } from '../../../components/menutem/MenuItem';
 import { Link } from '../../../components/link/Link';
 
 type FooterMenuPropsType = {
@@ -8,12 +8,12 @@ type FooterMenuPropsType = {
 
 export const FooterMenu = (props: FooterMenuPropsType) => {
   return (
-    <StyledFooterMenu>
+    <StyledFooterMenu role='menu'>
       {props.menuItems.length > 0 &&
         props.menuItems.map((item, i) => (
-          <ListItem key={i}>
+          <MenuItem role='menuitem' key={i}>
             <Link href={`#${item.toLowerCase()}`}>{item}</Link>
-          </ListItem>
+          </MenuItem>
         ))}
     </StyledFooterMenu>
   );

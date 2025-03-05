@@ -38,7 +38,7 @@ export const Footer = () => {
           <FlexWrapper $direction={'column'} $justify={'space-between'} $gap={'55px'}>
             <FooterBox>
               <Logo />
-              <BtnEllipse as={'a'} href='#main'>
+              <BtnEllipse as={'a'} href='#main' aria-label={'button top site'}>
                 <Icon
                   width='36'
                   height='36'
@@ -63,7 +63,7 @@ const StyledFooter = styled.footer`
 `;
 
 
-const FooterTitle = styled.h4`
+const FooterTitle = styled.h3`
   font-weight: 300;
   font-size: 18px;
   color: ${theme.colors.fontColorSecond};

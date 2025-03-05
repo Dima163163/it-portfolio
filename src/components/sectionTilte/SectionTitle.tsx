@@ -6,7 +6,7 @@ type SectionTitlePropsType = {
   $margin?: string;
 };
 
-export const SectionTitle = styled.h3<SectionTitlePropsType>`
+export const SectionTitle = styled.h2<SectionTitlePropsType>`
 display: inline-block;
   font-family: "NEXT ART", sans-serif;
   font-weight: 400;

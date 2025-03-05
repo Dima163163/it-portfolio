@@ -13,7 +13,14 @@ export const BtnEllipse = styled.button`
   cursor: pointer;
   color: ${theme.colors.fontColorFirst};
 
-  &:hover{
+  &:hover {
+    background: transparent;
+    border-color: ${theme.colors.secondBgBtn};
+    color: ${theme.colors.secondBgBtn};
+  }
+
+  &:focus {
+    outline: none;
     background: transparent;
     border-color: ${theme.colors.secondBgBtn};
     color: ${theme.colors.secondBgBtn};

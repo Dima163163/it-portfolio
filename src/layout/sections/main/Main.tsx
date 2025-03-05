@@ -6,6 +6,7 @@ import { Ellipse } from '../../../components/ellipse/Ellipse';
 import { Container } from '../../../components/container/Container';
 import { theme } from '../../../styles/Theme';
 import { AnimationBorderEffect, TextAnimation } from '../../../styles/animations/Animations';
+import { font } from '../../../styles/Common';
 
 type StyleMainSkillPropsType = {
   $inset?: string;
@@ -18,7 +19,6 @@ export const Main = () => {
         <FlexWrapper
           $align={'center'}
           $justify={'space-between'}
-          $gap={'30px'}
           $wrap={'wrap'}
         >
           <MainContent>
@@ -36,8 +36,8 @@ export const Main = () => {
           <ImageWrapper>
             <Ellipse
               $width='90%'
-              $height='auto'
-              $boxshadowcolor='0 4px 70px 0 rgba(0, 196, 240, 0.42)'
+              $height='89%'
+              $boxshadow='0 0 70px 0 rgba(0, 196, 240, 0.42)'
               $inset='auto 0 0 auto'
             >
               <svg
@@ -55,11 +55,11 @@ export const Main = () => {
                 />
               </svg>
             </Ellipse>
-            <StyleMainSkill $inset={'18% auto auto 15%'}>SC</StyleMainSkill>
+            <StyleMainSkill $inset={'16% auto auto 15%'}>SC</StyleMainSkill>
             <StyleMainSkill $inset={'auto auto 45% 0'}>JS</StyleMainSkill>
             <StyleMainSkill $inset={'auto auto 20% 3%'}>&lt;/</StyleMainSkill>
-            <StyleMainSkill $inset={'8% 40% auto auto'}>TS</StyleMainSkill>
-            <Photo src={photo} />
+            <StyleMainSkill $inset={'2% 40% auto auto'}>TS</StyleMainSkill>
+            <Photo src={photo} alt={photo}/>
           </ImageWrapper>
         </FlexWrapper>
       </Container>
@@ -71,44 +71,70 @@ const StyledMain = styled.section`
   background-color: ${theme.colors.primaryBg};
   overflow: hidden;
   padding-top: 100px;
+
+  @media (max-width: 1060px){
+    ${FlexWrapper} {
+    justify-content: center;
+  }
+  }
 `;
 
 const MainContent = styled.div`
   max-width: 447px;
+
+  @media ${theme.media.tablet} {
+    margin-bottom: 30px;
+  }
 `;
 
 const StyledGreeting = styled.span`
-  font-family: "NEXT ART", sans-serif;
-  font-weight: 600;
-  font-size: 48px;
-  color: ${theme.colors.fontColorFirst};
+  ${font({family: '"NEXT ART", sans-serif', weight: 600, Fmax: 48, Fmin: 27})};
+  display: block;
   margin-bottom: 27px;
+
+  @media ${theme.media.mobile} {
+    font-size: 27px;
+    margin-bottom: 12px;
+  }
 `;
 
 const NameWrapper = styled.div`
   display: inline-block;
   margin-bottom: 27px;
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 12px;
+  }
 `
 
 const Name = styled.div`
+  ${font({family: '"NEXT ART", sans-serif', weight: 700, Fmax: 72, Fmin: 27})};
   padding-right: 10px;
   overflow: hidden;
   max-width: fit-content;
-  font-family: "NEXT ART", sans-serif;
-  font-weight: 700;
-  font-size: 72px;
-  color: ${theme.colors.fontColorFirst};
 
   &:first-child {
     border-right: .15em solid ${theme.colors.fontColorFour};
     animation: ${TextAnimation} 3s steps(25, end),
                 ${AnimationBorderEffect} 0.7s infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
   }
 
   &:last-child {
     border-right: .15em solid ${theme.colors.fontColorFour};
     animation: ${TextAnimation} 3s steps(25, end),
-                ${AnimationBorderEffect} 0.7s infinite;;
+                ${AnimationBorderEffect} 0.7s infinite;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  }
+
+  @media ${theme.media.mobile} {
+    font-size: 52px;
   }
 `;
 
@@ -118,6 +144,10 @@ const MainTitle = styled.h1`
   color: ${theme.colors.fontColorFirst};
   margin-bottom: 27px;
   max-width: 430px;
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 12px;
+  }
 `;
 
 const Photo = styled.img`
@@ -131,7 +161,7 @@ const Photo = styled.img`
 const ImageWrapper = styled.div`
   position: relative;
   min-width: 632px;
-  height: 674px;
+  height: 640px;
   margin-right: -32px;
 
   img {
@@ -139,16 +169,23 @@ const ImageWrapper = styled.div`
     right: 0;
     bottom: 0;
   }
+
+  @media ${theme.media.tablet} {
+    min-width: 446px;
+    height: 463px;
+  }
+
+  @media ${theme.media.mobile} {
+    min-width: 346px;
+    height: 363px;
+  }
 `;
 
 const StyleMainSkill = styled.div<StyleMainSkillPropsType>`
-  font-family: "NEXT ART", sans-serif;
+  ${font({family: '"NEXT ART", sans-serif', weight: 700, Fmax: 36, Fmin: 18, color: `${theme.colors.fontColorSkill}`})}
   border-radius: 100%;
   width: 90px;
   height: 90px;
-  font-weight: 700;
-  font-size: 36px;
-  color: ${theme.colors.ellipseColorFirst};
   background-image: linear-gradient(135deg,
   ${theme.colors.ellipseBgFirst} 0%,
   ${theme.colors.ellipseBgSecond} 100%);
@@ -159,4 +196,14 @@ const StyleMainSkill = styled.div<StyleMainSkillPropsType>`
   position: absolute;
   z-index: 3;
   inset: ${(props) => props.$inset || 'auto'};
+
+  @media ${theme.media.tablet} {
+    width: 70px;
+    height: 70px;
+  }
+
+  @media ${theme.media.mobile} {
+    width: 50px;
+    height: 50px;
+  }
 `;

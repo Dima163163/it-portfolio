@@ -64,7 +64,7 @@ const SlideContent = styled.div`
   padding-top: 42px;
 `;
 
-const Title = styled.h4`
+const Title = styled.h3`
   font-weight: 300;
   font-size: 24px;
   color: ${theme.colors.fontColorSecond};
@@ -80,9 +80,10 @@ const Text = styled.p`
 `;
 
 const Link = styled.a`
-  display: block;
+  display: inline-block;
   color: ${theme.colors.firstBgBtn};
   cursor: pointer;
+  padding: 3px;
 
   svg {
     stroke:${theme.colors.firstBgBtn};
@@ -94,6 +95,15 @@ const Link = styled.a`
 
   &:hover {
     color: ${theme.colors.fontColorSecond};
+
+    svg {
+      stroke:${theme.colors.fontColorSecond};
+    }
+  }
+
+  &:focus-visible {
+    outline: 1px solid ${theme.colors.firstBgBtn};
+
     svg {
       stroke:${theme.colors.fontColorSecond};
     }

@@ -40,11 +40,12 @@ export const Slider = () => {
 
   return (
     <StyledSlider>
-      <BtnEllipse onClick={changePrevSlide} disabled={idActiveSlide === 0}>
+      <BtnEllipse aria-label={'button previous slide'} onClick={changePrevSlide} disabled={idActiveSlide === 0}>
         <Icon width='35' height='35' viewBox='0 0 35 35' iconId='arrowLeft' />
       </BtnEllipse>
       <Slides slides={slides} idactiveslide={idActiveSlide} />
       <BtnEllipse
+        aria-label={'button next slide'}
         onClick={changeNextSlide}
         disabled={idActiveSlide === slides.length - 1}
       >

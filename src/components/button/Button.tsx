@@ -20,4 +20,11 @@ export const Button = styled.button`
     border-color: ${theme.colors.firstBgBtn};
     color: ${theme.colors.secondBgBtn};
   }
+
+  &:focus {
+    outline: none;
+    background: none;
+    border-color: ${theme.colors.firstBgBtn};
+    color: ${theme.colors.secondBgBtn};
+  }
 `;

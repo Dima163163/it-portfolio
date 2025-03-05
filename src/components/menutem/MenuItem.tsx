@@ -2,11 +2,11 @@ import styled, { css } from 'styled-components';
 import { theme } from '../../styles/Theme';
 import { Link } from '../link/Link';
 
-type ListItemPropsType = {
+type MenuItemPropsType = {
   $typeItem?: string;
 };
 
-export const ListItem = styled.li<ListItemPropsType>`
+export const MenuItem = styled.li<MenuItemPropsType>`
   &:hover {
     ${Link} {
       color: ${theme.colors.firstBgBtn};

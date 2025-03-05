@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import { ListItem } from '../../../components/listItem/ListItem';
+import { MenuItem } from '../../../components/menutem/MenuItem';
 import { Link } from '../../../components/link/Link';
+import { theme } from '../../../styles/Theme';
 
 type HeaderMenuPropsType = {
   menuItems: Array<string>;
@@ -9,22 +10,26 @@ type HeaderMenuPropsType = {
 export const HeaderMenu = (props: HeaderMenuPropsType) => {
   return (
     <StyledHeaderMenu>
-      <ul>
+      <Menu role='menu'>
         {props.menuItems.length > 0 &&
           props.menuItems.map((item, i) => (
-            <ListItem key={i} $typeItem='headerItem'>
+            <MenuItem role='menuitem' key={i} $typeItem='headerItem'>
               <Link href={`#${item.toLowerCase()}`}>{item}</Link>
-            </ListItem>
+            </MenuItem>
           ))}
-      </ul>
+      </Menu>
     </StyledHeaderMenu>
   );
 };
 
 const StyledHeaderMenu = styled.nav`
-  ul {
-    display: flex;
-    gap: 30px;
-    flex-direction: row;
+  @media ${theme.media.tablet} {
+    display: none;
   }
 `;
+
+const Menu = styled.ul`
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+`

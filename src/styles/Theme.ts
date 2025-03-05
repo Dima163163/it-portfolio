@@ -10,11 +10,13 @@ export const theme = {
     firstBgBtn: '#e2a300',
     secondBgBtn: '#e29500',
     thirdBgBtn: '#937732',
+    fourBgBtn: '#00c4f0',
 
     fontColorFirst: '#e4e4e4',
     fontColorSecond: '#fff',
     fontColorThird: '#000',
     fontColorFour: '#e2a300',
+    fontColorSkill: '#00c4f0',
 
     ellipseColorFirst: '#00c4f0',
     ellipseColorSecond: '#E2A200',
@@ -23,5 +25,11 @@ export const theme = {
     ellipseBgSecond: '#2d2d2d',
 
     borderInput: '#e2a300',
+  },
+
+  media: {
+    laptop: 'screen and (max-width: 1199px)',
+    tablet: 'screen and (max-width: 768px)',
+    mobile: 'screen and (max-width: 576px)',
   }
 }
