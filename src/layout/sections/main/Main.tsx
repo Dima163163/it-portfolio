@@ -73,9 +73,10 @@ const StyledMain = styled.section`
   padding-top: 100px;
 
   @media (max-width: 1060px){
+    padding-top: 120px;
     ${FlexWrapper} {
-    justify-content: center;
-  }
+      justify-content: center;
+    }
   }
 `;
 
@@ -92,7 +93,7 @@ const StyledGreeting = styled.span`
   display: block;
   margin-bottom: 27px;
 
-  @media ${theme.media.mobile} {
+  @media ${theme.media.tablet} {
     font-size: 27px;
     margin-bottom: 12px;
   }
@@ -102,7 +103,7 @@ const NameWrapper = styled.div`
   display: inline-block;
   margin-bottom: 27px;
 
-  @media ${theme.media.mobile} {
+  @media ${theme.media.tablet} {
     margin-bottom: 12px;
   }
 `
@@ -131,10 +132,6 @@ const Name = styled.div`
     @media (prefers-reduced-motion: reduce) {
       animation: none;
     }
-  }
-
-  @media ${theme.media.mobile} {
-    font-size: 52px;
   }
 `;
 

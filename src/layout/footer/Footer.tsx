@@ -40,8 +40,6 @@ export const Footer = () => {
               <Logo />
               <BtnEllipse as={'a'} href='#main' aria-label={'button top site'}>
                 <Icon
-                  width='36'
-                  height='36'
                   viewBox='0 0 36 36'
                   iconId='arrowTop'
                 />
@@ -92,6 +90,13 @@ const FooterBox = styled.div`
   display: flex;
   gap: 32px;
   justify-content: space-between;
+
+  ${BtnEllipse} {
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
 `;
 
 const CopyrightWrapper = styled.div`

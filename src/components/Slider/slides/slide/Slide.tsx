@@ -22,7 +22,7 @@ export const Slide = (props: SlidePropsType) => {
         <Text>{props.text}</Text>
         <Link>
           <span>More</span>
-          <Icon width='14' height='10' viewBox='2 1 14 10' iconId='btnArrow' />
+          <Icon viewBox='2 1 14 10' iconId='btnArrow' />
         </Link>
       </SlideContent>
     </StyledSlide>
@@ -115,6 +115,8 @@ const Link = styled.a`
 
   svg {
     stroke:${theme.colors.firstBgBtn};
+    width: 14px;
+    height: 8px;
   }
 
   span {

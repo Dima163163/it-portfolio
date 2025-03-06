@@ -4,30 +4,34 @@ import { theme } from '../../../../styles/Theme';
 import { font } from '../../../../styles/Common';
 
 type SkillPropsType = {
-  iconId?: string;
-  text?: string;
-  width?: string;
-  height?: string;
+  iconId: string;
   viewBox?: string;
-  gap?: string;
   title: string;
 };
 
 export const Skill = (props: SkillPropsType) => {
   return (
     <StyledSkill>
-      {props.iconId && (
+      <IconWrapper>
         <Icon
           iconId={props.iconId}
-          width={props.width}
-          height={props.height}
           viewBox={props.viewBox}
         />
-      )}
+      </IconWrapper>
       <SkillTitle>{props.title}</SkillTitle>
     </StyledSkill>
   );
 };
+
+const IconWrapper = styled.div`
+  width: 120px;
+  height: 120px;
+
+  @media ${theme.media.tablet} {
+    width: 50px;
+    max-height: 50px;
+  }
+`
 
 const StyledSkill = styled.div`
   border-radius: 29px;
@@ -42,10 +46,17 @@ const StyledSkill = styled.div`
   gap: 30px;
   padding: 20px 20px 50px 20px;
 
-  @media ${theme.media.mobile} {
+  &:last-child {
+    ${IconWrapper} {
+      height: 87px;
+    }
+  }
+
+  @media ${theme.media.tablet} {
     width: 160px;
     height: 160px;
     padding: 20px 20px 30px 20px;
+    gap: 20px;
   }
 `;
 

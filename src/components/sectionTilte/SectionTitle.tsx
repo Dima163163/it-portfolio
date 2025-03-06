@@ -7,7 +7,7 @@ type SectionTitlePropsType = {
 };
 
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
-display: inline-block;
+  display: inline-block;
   font-family: "NEXT ART", sans-serif;
   font-weight: 400;
   font-size: 48px;
