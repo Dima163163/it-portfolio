@@ -38,5 +38,6 @@ const StyledSlides = styled.div`
 
   @media ${theme.media.laptop} {
     max-width: 100%;
+    margin-bottom: 55px;
   }
 `;

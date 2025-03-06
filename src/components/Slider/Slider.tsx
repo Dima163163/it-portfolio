@@ -64,9 +64,11 @@ const StyledSlider = styled.div`
   @media ${theme.media.laptop} {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0;
 
     ${BtnEllipse}:first-child {
       order: 1;
+      margin-right: 50px;
     }
 
     ${BtnEllipse}:last-child {
