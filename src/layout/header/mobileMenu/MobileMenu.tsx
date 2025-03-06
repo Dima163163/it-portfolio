@@ -67,7 +67,7 @@ const BurgerButton = styled.button<{$isOpen: boolean}>`
 
     span {
       &:first-child {
-        margin-bottom: -6px;
+        margin-bottom: -5px;
         transform: rotate(-45deg) translateY(0);
       }
 
