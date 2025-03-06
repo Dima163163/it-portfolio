@@ -22,7 +22,9 @@ export const Slide = (props: SlidePropsType) => {
         <Text>{props.text}</Text>
         <Link>
           <span>More</span>
-          <Icon viewBox='2 1 14 10' iconId='btnArrow' />
+          <IconWrapper>
+            <Icon viewBox='2 1 14 10' iconId='btnArrow' />
+          </IconWrapper>
         </Link>
       </SlideContent>
     </StyledSlide>
@@ -113,29 +115,37 @@ const Link = styled.a`
   cursor: pointer;
   padding: 3px;
 
-  svg {
-    stroke:${theme.colors.firstBgBtn};
-    width: 14px;
-    height: 8px;
-  }
-
   span {
     margin-right: 7px;
   }
 
   &:hover {
     color: ${theme.colors.fontColorSecond};
-
-    svg {
-      stroke:${theme.colors.fontColorSecond};
-    }
   }
 
   &:focus-visible {
     outline: 1px solid ${theme.colors.firstBgBtn};
+  }
+`;
 
+const IconWrapper = styled.div`
+  display: inline-block;
+  width: 14px;
+  height: 8px;
+
+  svg {
+    stroke:${theme.colors.firstBgBtn};
+  }
+
+  &:hover {
     svg {
       stroke:${theme.colors.fontColorSecond};
     }
   }
-`;
+
+    &:focus-visible {
+    svg {
+      stroke:${theme.colors.fontColorSecond};
+    }
+  }
+`

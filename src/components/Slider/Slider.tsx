@@ -42,15 +42,19 @@ export const Slider = () => {
   return (
     <StyledSlider>
       <BtnEllipse aria-label={'button previous slide'} onClick={changePrevSlide} disabled={idActiveSlide === 0}>
-        <Icon viewBox='0 0 35 35' iconId='arrowLeft' />
+        <IconWrapper>
+          <Icon viewBox='0 0 35 35' iconId='arrowLeft' />
+        </IconWrapper>
       </BtnEllipse>
       <Slides slides={slides} idactiveslide={idActiveSlide} />
       <BtnEllipse
         aria-label={'button next slide'}
         onClick={changeNextSlide}
         disabled={idActiveSlide === slides.length - 1}
-      >
+      > 
+      <IconWrapper>
         <Icon viewBox='0 0 35 35' iconId='arrowRight' />
+      </IconWrapper>
       </BtnEllipse>
     </StyledSlider>
   );
@@ -60,13 +64,6 @@ const StyledSlider = styled.div`
   display: flex;
   gap: 40px;
   align-items: center;
-
-  ${BtnEllipse} {
-    svg {
-      width: 35px;
-      height: 35px;
-    }
-  }
 
   @media ${theme.media.laptop} {
     flex-wrap: wrap;
@@ -83,3 +80,9 @@ const StyledSlider = styled.div`
     }
   }
 `;
+
+
+const IconWrapper = styled.div`
+  width: 35px;
+  height: 35px;
+`

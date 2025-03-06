@@ -5,7 +5,9 @@ import { theme } from '../../styles/Theme';
 export const Logo = () => {
   return (
     <StyledLogo href='/'>
-      <Icon iconId={'logoSvg'} viewBox='0 0 65 48' />
+      <IconWrapper>
+        <Icon iconId={'logoSvg'} viewBox='0 0 65 48' />
+      </IconWrapper>
       TimDim
     </StyledLogo>
   );
@@ -19,9 +21,9 @@ const StyledLogo = styled.a`
   font-family: 'Nico Moji', sans-serif;
   font-weight: 400;
   font-size: 18px;
-
-  svg {
-    width: 65px;
-    height: 48px;
-  }
 `;
+
+const IconWrapper = styled.div`
+  width: 65px;
+  height: 48px;
+`
