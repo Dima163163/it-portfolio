@@ -114,6 +114,8 @@ const Link = styled.a`
   color: ${theme.colors.firstBgBtn};
   cursor: pointer;
   padding: 3px;
+  font-size: 18px;
+  font-weight: 300;
 
   span {
     margin-right: 7px;
