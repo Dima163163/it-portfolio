@@ -19,4 +19,8 @@ const StyledPortfolio = styled.section`
   background: ${theme.colors.primaryBg};
   text-align: center;
   padding: 94px 0 100px;
+
+  @media ${theme.media.mobile} {
+    padding: 90px 0;
+  }
 `;

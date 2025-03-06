@@ -18,63 +18,63 @@ export const About = () => {
             $height='792px'
             $boxshadow='0 4px 70px rgba(255, 255, 255, 0.25)'
             $inset='60px auto auto -100px'
-          >
-            <svg
-              viewBox='70 70 792 792'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
             >
-              <circle
-                cx='466'
-                cy='462'
-                r='351.5'
-                stroke={`${theme.colors.ellipseColorThird}`}
-                strokeWidth='89'
-                shapeRendering='crispEdges'
-              />
-            </svg>
+              <svg
+                viewBox='70 70 792 792'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <circle
+                  cx='466'
+                  cy='462'
+                  r='351.5'
+                  stroke={`${theme.colors.ellipseColorThird}`}
+                  strokeWidth='89'
+                  shapeRendering='crispEdges'
+                />
+              </svg>
           </Ellipse>
           <Ellipse
             $width='356px'
             $height='356px'
             $boxshadow='0 4px 70px rgba(226, 162, 0, 0.25)'
             $inset='40px 60px auto auto'
-          >
-            <svg
-              viewBox='70 66 356 356'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
             >
-              <circle
-                cx='248'
-                cy='244'
-                r='161'
-                stroke={`${theme.colors.ellipseColorSecond}`}
-                strokeWidth='34'
-                shapeRendering='crispEdges'
-              />
-            </svg>
+              <svg
+                viewBox='70 66 356 356'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <circle
+                  cx='248'
+                  cy='244'
+                  r='161'
+                  stroke={`${theme.colors.ellipseColorSecond}`}
+                  strokeWidth='34'
+                  shapeRendering='crispEdges'
+                />
+              </svg>
           </Ellipse>
           <Ellipse
             $width='486px'
             $height='486px'
             $boxshadow='0 4px 70px rgba(0, 193, 236, 0.25)'
             $inset='auto 75px 0 auto'
-          >
-            <svg
-              viewBox='70 66 486 486'
-              fill='none'
-              xmlns='http://www.w3.org/2000/svg'
             >
-              <circle
-                cx='313'
-                cy='309'
-                r='215.5'
-                stroke={`${theme.colors.ellipseColorFirst}`}
-                strokeWidth='55'
-                shapeRendering='crispEdges'
-              />
-            </svg>
+              <svg
+                viewBox='70 66 486 486'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
+              >
+                <circle
+                  cx='313'
+                  cy='309'
+                  r='215.5'
+                  stroke={`${theme.colors.ellipseColorFirst}`}
+                  strokeWidth='55'
+                  shapeRendering='crispEdges'
+                />
+              </svg>
           </Ellipse>
           <AboutContent>
             <FlexWrapper $direction={'column'} $gap={'196px'}>
@@ -136,25 +136,85 @@ type WrapperPhotoPropsType = {
 const StyledAbout = styled.section`
   padding: 50px 0;
   overflow: hidden;
+
+  @media ${theme.media.tablet} {
+    padding: 45px 0 126px;
+  }
+
+  @media ${theme.media.mobile} {
+    ${Container} {
+      padding: 0;
+    }
+  }
 `;
 
 const StyledAboutWrapper = styled.div`
   position: relative;
   display: flex;
   margin-right: -58px;
-`;
 
-const AboutContent = styled.div`
-  position: relative;
-  z-index: 3;
-  display: flex;
-  padding-left: 135px;
+  @media ${theme.media.laptop} {
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+
+    ${Ellipse}:not(:nth-child(2)) {
+      display: none;
+    }
+
+    ${Ellipse}:nth-child(2) {
+      bottom: 0;
+      right: 0;
+      top: auto;
+      left: auto;
+    }
+  }
+
+  @media ${theme.media.tablet} {
+    ${Ellipse}:nth-child(2) {
+      bottom: -100px;
+      right: -100px;
+    }
+  }
 `;
 
 const PhotoBox = styled.div`
   display: flex;
   align-items: center;
   margin-left: -40px;
+
+  @media ${theme.media.laptop} {
+    margin-left: 0;
+
+    &:last-child {
+      margin-top: -31px;
+      max-width: 307px;
+      height:400px;
+    }
+  }
+`;
+
+const AboutContent = styled.div`
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  padding-left: 135px;
+
+  @media ${theme.media.laptop} {
+    padding-left: 0;
+    flex-wrap: wrap;
+    align-items: center;
+
+    ${FlexWrapper}:first-child {
+      display: none;
+    }
+  }
+
+  @media ${theme.media.tablet} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const WrapperPhoto = styled.div<WrapperPhotoPropsType>`
@@ -163,6 +223,11 @@ const WrapperPhoto = styled.div<WrapperPhotoPropsType>`
   border-radius: 14px;
   padding: 23px;
   background-color: ${theme.colors.fiveBg};
+
+  @media ${theme.media.laptop} {
+    min-width: 100%;
+    height: 100%;
+  }
 `;
 
 const BorderPhoto = styled.div`
@@ -174,12 +239,18 @@ const BorderPhoto = styled.div`
 
 const Photo = styled.img`
   width: 100%;
+  height: auto;
   overflow: hidden;
 `;
 
 const AboutDescriptionWrapper = styled.div`
   padding-top: 70px;
   margin-left: -35px;
+
+  @media ${theme.media.laptop} {
+    margin-left: 0;
+    padding-top: 0;
+  }
 `;
 
 const AboutDescription = styled.div`
@@ -188,6 +259,10 @@ const AboutDescription = styled.div`
   padding: 0 63px 63px 63px;
   border-radius: 14px;
   max-height: min-content;
+
+  @media ${theme.media.mobile} {
+    padding: 0 15px 53px 15px;
+  }
 `;
 
 const AboutText = styled.p`

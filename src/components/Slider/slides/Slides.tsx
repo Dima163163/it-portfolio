@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Slide } from './slide/Slide';
+import { theme } from '../../../styles/Theme';
 
 type SlidePropType = {
   title: string;
@@ -34,4 +35,8 @@ const StyledSlides = styled.div`
   overflow: hidden;
   max-width: 970px;
   width: 100%;
+
+  @media ${theme.media.laptop} {
+    max-width: 100%;
+  }
 `;

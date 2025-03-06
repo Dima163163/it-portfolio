@@ -25,6 +25,10 @@ const StyledContacts = styled.section`
   background-image: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
   text-align: center;
   padding: 100px 0;
+
+  @media ${theme.media.mobile} {
+    padding: 45px 0;
+  }
 `;
 
 

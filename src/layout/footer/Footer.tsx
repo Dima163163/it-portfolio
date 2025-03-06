@@ -91,6 +91,7 @@ const FooterLink = styled.a`
 const FooterBox = styled.div`
   display: flex;
   gap: 32px;
+  justify-content: space-between;
 `;
 
 const CopyrightWrapper = styled.div`
@@ -111,6 +112,7 @@ const FooterContent = styled.div`
   max-width: 773px;
   width: 100%;
   margin: 0 auto;
+  flex-wrap: wrap;
 
   ${FooterLink} {
     font-size: 18px;
@@ -119,6 +121,16 @@ const FooterContent = styled.div`
 
     &:hover {
       color: ${theme.colors.firstBgBtn}
+    }
+  }
+
+  @media ${theme.media.tablet} {
+    gap: 50px;
+
+
+    ${FlexWrapper}:last-child {
+      width: 100%;
+      text-align: center;
     }
   }
 `;

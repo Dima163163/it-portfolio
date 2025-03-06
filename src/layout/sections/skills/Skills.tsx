@@ -3,6 +3,7 @@ import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import { Skill } from './skill/Skill';
 import { SectionTitle } from '../../../components/sectionTilte/SectionTitle';
 import { Container } from '../../../components/container/Container';
+import { theme } from '../../../styles/Theme';
 type SkillItemPropsType = {
   iconId?: string;
   text?: string;
@@ -22,7 +23,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '0 0 120 120',
-    gap: '30px'
   },
   {
     iconId: 'css',
@@ -30,7 +30,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '0 0 120 120',
-    gap: '30px'
   },
   {
     iconId: 'js',
@@ -38,7 +37,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '0 0 120 120',
-    gap: '30px'
   },
   {
     iconId: 'ts',
@@ -46,7 +44,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '0 0 120 120',
-    gap: '30px'
   },
   {
     iconId: 'styledComponents',
@@ -54,7 +51,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '0 0 120 120',
-    gap: '30px'
   },
   {
     iconId: 'react',
@@ -62,7 +58,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '0 0 120 120',
-    gap: '30px'
   },
   {
     iconId: 'reactNative',
@@ -70,7 +65,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '0 0 120 120',
-    gap: '30px'
   },
   {
     iconId: 'redux',
@@ -78,7 +72,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '0 0 120 120',
-    gap: '30px'
   },
   {
     iconId: 'github',
@@ -86,7 +79,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '-10 -10 120 120',
-    gap: '30px'
   },
   {
     iconId: 'figma',
@@ -94,7 +86,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '-10 -10 120 120',
-    gap: '30px'
   },
   {
     iconId: 'git',
@@ -102,7 +93,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '120',
     viewBox: '-10 -10 120 120',
-    gap: '30px'
   },
   {
     iconId: 'sass',
@@ -110,7 +100,6 @@ const skillsArr: SkillsArrPropsType = [
     width: '120',
     height: '87',
     viewBox: '0 0 120 87',
-    gap: '30px'
   }
 ];
 
@@ -129,7 +118,6 @@ export const Skills = () => {
                 width={item.width}
                 height={item.height}
                 viewBox={item.viewBox}
-                gap={item.gap}
               />
             ))}
         </FlexWrapper>
@@ -141,4 +129,10 @@ export const Skills = () => {
 const StyledSkills = styled.section`
   padding: 50px 0;
   text-align: center;
+
+  @media ${theme.media.mobile} {
+    ${FlexWrapper} {
+      gap: 25px
+    }
+  }
 `;

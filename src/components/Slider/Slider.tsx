@@ -4,6 +4,7 @@ import { Slides } from './slides/Slides';
 import { BtnEllipse } from '../btnEllipse/BtnEllipse';
 import { useState } from 'react';
 import portfolioImage from '../../assets/images/portfolio.png';
+import { theme } from '../../styles/Theme';
 
 const slides = [
   {
@@ -59,4 +60,17 @@ const StyledSlider = styled.div`
   display: flex;
   gap: 40px;
   align-items: center;
+
+  @media ${theme.media.laptop} {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    ${BtnEllipse}:first-child {
+      order: 1;
+    }
+
+    ${BtnEllipse}:last-child {
+      order: 2;
+    }
+  }
 `;

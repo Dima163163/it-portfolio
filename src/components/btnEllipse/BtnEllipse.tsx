@@ -7,7 +7,7 @@ export const BtnEllipse = styled.button`
   border: 2px solid transparent;
   min-width: 60px;
   height: 60px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;

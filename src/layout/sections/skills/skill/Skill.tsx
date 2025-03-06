@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Icon } from '../../../../components/icon/Icon';
 import { theme } from '../../../../styles/Theme';
+import { font } from '../../../../styles/Common';
 
 type SkillPropsType = {
   iconId?: string;
@@ -12,13 +13,9 @@ type SkillPropsType = {
   title: string;
 };
 
-type StyledSkillPropsType = {
-  $gap?: string;
-};
-
 export const Skill = (props: SkillPropsType) => {
   return (
-    <StyledSkill $gap={props.gap}>
+    <StyledSkill>
       {props.iconId && (
         <Icon
           iconId={props.iconId}
@@ -32,7 +29,7 @@ export const Skill = (props: SkillPropsType) => {
   );
 };
 
-const StyledSkill = styled.div<StyledSkillPropsType>`
+const StyledSkill = styled.div`
   border-radius: 29px;
   width: 270px;
   height: 270px;
@@ -42,12 +39,16 @@ const StyledSkill = styled.div<StyledSkillPropsType>`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  gap: ${(props) => props.$gap || '30px'};
+  gap: 30px;
   padding: 20px 20px 50px 20px;
+
+  @media ${theme.media.mobile} {
+    width: 160px;
+    height: 160px;
+    padding: 20px 20px 30px 20px;
+  }
 `;
 
 const SkillTitle = styled.h3`
-  font-weight: 300;
-  font-size: 24px;
-  color: ${theme.colors.fontColorSecond};
+  ${font({ weight: 300, color: `${theme.colors.fontColorSecond}`, Fmax: 24, Fmin: 18})};
 `;

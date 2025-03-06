@@ -32,6 +32,7 @@ export const Slide = (props: SlidePropsType) => {
 const StyledSlide = styled.div<StyledSlidePropsType>`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   min-width: 100%;
   padding: 50px;
   gap: 30px;
@@ -42,6 +43,16 @@ const StyledSlide = styled.div<StyledSlidePropsType>`
   border-radius: 29px;
   transform: translateX(${(props) => props.$idactiveslide * -100}%);
   transition: 0.6s all;
+
+  @media ${theme.media.laptop} {
+    flex-direction: column;
+    align-items: center;
+    gap: 57px;
+  }
+
+  @media ${theme.media.tablet} {
+    padding: 30px 25px;
+  }
 `;
 
 type StyledImagePropsType = {
@@ -58,10 +69,27 @@ const StyledImage = styled.div<StyledImagePropsType>`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 15%;
+
+  @media ${theme.media.tablet} {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  @media ${theme.media.mobile} {
+    max-width: 100%;
+    min-width: 100%;
+    height: 318px;
+  }
 `;
 
 const SlideContent = styled.div`
   padding-top: 42px;
+  max-width: 296px;
+
+  @media ${theme.media.laptop} {
+    padding-top: 0;
+    max-width: 100%;
+  }
 `;
 
 const Title = styled.h3`
@@ -75,7 +103,7 @@ const Text = styled.p`
   font-weight: 300;
   font-size: 18px;
   color: ${theme.colors.fontColorSecond};
-  max-width: 290px;
+  max-width: 100%;
   margin-bottom: 25px;
 `;
 

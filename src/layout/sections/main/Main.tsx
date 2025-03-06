@@ -178,6 +178,7 @@ const ImageWrapper = styled.div`
   @media ${theme.media.mobile} {
     min-width: 346px;
     height: 363px;
+    margin-right: 0;
   }
 `;
 
