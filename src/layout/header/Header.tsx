@@ -1,43 +1,46 @@
-import styled from 'styled-components';
 import { Logo } from '../../components/logo/Logo';
+
+import { DesktopMenu } from './headerMenu/desktopMenu/DesktopMenu';
+import { MobileMenu } from './headerMenu/mobileMenu/MobileMenu';
+import React, { useEffect, useState } from 'react';
+import { S } from './Header_Styles';
 import { Container } from '../../components/container/Container';
 import { FlexWrapper } from '../../components/flexWrapper/FlexWrapper';
-import { theme } from '../../styles/Theme';
-import { HeaderMenu } from './headerMenu/HeaderMenu';
-import { MobileMenu } from './mobileMenu/MobileMenu';
-import { useState } from 'react';
 
 const items = ['Home', 'Skills', 'About me', 'Portfolio', 'Contact'];
 
-export const Header = () => {
+export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint= 768;
+
+  useEffect(() => {
+    const handleWidthResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleWidthResize);
+
+    return () => window.removeEventListener('resize', handleWidthResize)
+  }, [])
 
   const openMenu = () => {
     setIsOpen(!isOpen);
+
     if (!isOpen) {
-      document.body.style = 'overflow: hidden'
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style = 'overflow: auto'
+      document.body.style.overflow = 'auto';
     }
-  }
+  };
 
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <FlexWrapper $justify={'space-between'} $align={'center'}>
           <Logo />
-          <HeaderMenu menuItems={items} />
-          <MobileMenu menuItems={items} isOpen={isOpen} openMenu={openMenu}/>
+          {width <= breakpoint ? <MobileMenu menuItems={items} isOpen={isOpen} openMenu={openMenu}/> : <DesktopMenu menuItems={items} />}
         </FlexWrapper>
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 };
 
-const StyledHeader = styled.header`
-  position: fixed;
-  width: 100%;
-  z-index: 5;
-  background-color: ${theme.colors.primaryBg};
-  padding: 26px 0;
-`;
+

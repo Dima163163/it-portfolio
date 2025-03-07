@@ -5,8 +5,8 @@ type FontPropsType = {
   weight?: number
   color?: string
   lineHeight?: number
-  Fmin?: number
-  Fmax?: number
+  Fmin: number
+  Fmax: number
 }
 
 export const font = ({family, color, weight, lineHeight, Fmin, Fmax}: FontPropsType) => `
@@ -14,5 +14,5 @@ export const font = ({family, color, weight, lineHeight, Fmin, Fmax}: FontPropsT
   font-weight: ${weight || 300};
   color: ${color || theme.colors.fontColorFirst};
   line-height: ${lineHeight || 'normal'};
-  font-size: calc( (100vw - 375px)/(1920 - 375) * (${Fmax} - ${Fmin}) + ${Fmin}px );
+  font-size: clamp(${Fmin}px, calc( (100vw - 375px)/(1920 - 375) * (${Fmax} - ${Fmin}) + ${Fmin}px ), ${Fmax}px);
 `;

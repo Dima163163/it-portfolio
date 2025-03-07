@@ -1,6 +1,6 @@
-import styled from 'styled-components';
 import { Slide } from './slide/Slide';
-import { theme } from '../../../styles/Theme';
+import { S } from '../Slider_Styles';
+import React from 'react';
 
 type SlidePropType = {
   title: string;
@@ -13,9 +13,9 @@ type SlidesPropsType = {
   idactiveslide: number;
 };
 
-export const Slides = (props: SlidesPropsType) => {
+export const Slides: React.FC<SlidesPropsType> = (props: SlidesPropsType) => {
   return (
-    <StyledSlides>
+    <S.Slides>
       {props.slides.length > 0 &&
         props.slides.map((slide, i) => (
           <Slide
@@ -26,18 +26,8 @@ export const Slides = (props: SlidesPropsType) => {
             idactiveslide={props.idactiveslide}
           />
         ))}
-    </StyledSlides>
+    </S.Slides>
   );
 };
 
-const StyledSlides = styled.div`
-  display: flex;
-  overflow: hidden;
-  max-width: 970px;
-  width: 100%;
 
-  @media ${theme.media.laptop} {
-    max-width: 100%;
-    margin-bottom: 55px;
-  }
-`;

@@ -1,40 +1,22 @@
-import styled from 'styled-components';
-import { theme } from '../../styles/Theme';
+import React from 'react';
+import { S } from './Menu_Styles';
 
-type menuPropsType = {
-  menuItems: Array<string>;
-  direction?: string;
-  gap?: string;
-};
+type MenuPropsType = {
+  menuItems: string[],
+  direction?: string,
+  typeItem?: string,
+  openMenu?: () => void
+}
 
-type StyledMenuPropsType = {
-  $direction?: string;
-  $gap?: string;
-};
-
-export const Menu = (props: menuPropsType) => {
+export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
   return (
-    <StyledMenu $direction={props.direction} $gap={props.gap}>
+    <S.Menu role='menu' direction={props.direction}>
       {props.menuItems.length > 0 &&
         props.menuItems.map((item, i) => (
-          <li key={i}>
-            <a href={`#${item.toLowerCase()}`}>{item}</a>
-          </li>
+          <S.MenuItem role='menuitem' key={i} $typeItem={props.typeItem}>
+            <S.Link onClick={() => props.openMenu && props.openMenu()} href={`#${item.toLowerCase()}`}>{item}</S.Link>
+          </S.MenuItem>
         ))}
-    </StyledMenu>
-  );
+    </S.Menu>
+  )
 };
-
-const StyledMenu = styled.ul<StyledMenuPropsType>`
-  display: flex;
-  gap: ${(props) => props.$gap || '30px'};
-  flex-direction: ${(props) => props.$direction || 'row'};
-
-  a {
-    color: ${theme.colors.fontColorFirst};
-  }
-
-  a:hover {
-    color: ${theme.colors.firstBgBtn};
-  }
-`;

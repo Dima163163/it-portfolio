@@ -30,4 +30,8 @@ export const BtnEllipse = styled.button`
     background: ${theme.colors.thirdBgBtn};
     pointer-events: none;
   }
+
+  &:active {
+    transform: translateY(4px);
+  }
 `;

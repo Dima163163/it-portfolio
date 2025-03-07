@@ -27,4 +27,8 @@ export const Button = styled.button`
     border-color: ${theme.colors.firstBgBtn};
     color: ${theme.colors.secondBgBtn};
   }
+
+  &:active {
+    transform: translateY(4px);
+  }
 `;

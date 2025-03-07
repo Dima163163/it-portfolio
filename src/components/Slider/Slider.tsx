@@ -1,10 +1,9 @@
-import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
 import { Slides } from './slides/Slides';
 import { BtnEllipse } from '../btnEllipse/BtnEllipse';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import portfolioImage from '../../assets/images/portfolio.png';
-import { theme } from '../../styles/Theme';
+import { S } from './Slider_Styles';
 
 const slides = [
   {
@@ -24,7 +23,7 @@ const slides = [
   }
 ];
 
-export const Slider = () => {
+export const Slider: React.FC = () => {
   const [idActiveSlide, setIdActiveSlide] = useState(0);
 
   const changeNextSlide = () => {
@@ -40,49 +39,26 @@ export const Slider = () => {
   };
 
   return (
-    <StyledSlider>
-      <BtnEllipse aria-label={'button previous slide'} onClick={changePrevSlide} disabled={idActiveSlide === 0}>
-        <IconWrapper>
+    <S.Slider>
+      <BtnEllipse
+        aria-label={'button previous slide'}
+        onClick={changePrevSlide}
+        disabled={idActiveSlide === 0}
+      >
+        <S.IconWrapper>
           <Icon viewBox='0 0 35 35' iconId='arrowLeft' />
-        </IconWrapper>
+        </S.IconWrapper>
       </BtnEllipse>
       <Slides slides={slides} idactiveslide={idActiveSlide} />
       <BtnEllipse
         aria-label={'button next slide'}
         onClick={changeNextSlide}
         disabled={idActiveSlide === slides.length - 1}
-      > 
-      <IconWrapper>
-        <Icon viewBox='0 0 35 35' iconId='arrowRight' />
-      </IconWrapper>
+      >
+        <S.IconWrapper>
+          <Icon viewBox='0 0 35 35' iconId='arrowRight' />
+        </S.IconWrapper>
       </BtnEllipse>
-    </StyledSlider>
+    </S.Slider>
   );
 };
-
-const StyledSlider = styled.div`
-  display: flex;
-  gap: 40px;
-  align-items: center;
-
-  @media ${theme.media.laptop} {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0;
-
-    ${BtnEllipse}:first-child {
-      order: 1;
-      margin-right: 50px;
-    }
-
-    ${BtnEllipse}:last-child {
-      order: 2;
-    }
-  }
-`;
-
-
-const IconWrapper = styled.div`
-  width: 35px;
-  height: 35px;
-`

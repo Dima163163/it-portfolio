@@ -1,12 +1,26 @@
 import styled, { css } from 'styled-components';
 import { theme } from '../../styles/Theme';
-import { Link } from '../link/Link';
+
+type MenuPropsType = {
+  direction?: string
+}
 
 type MenuItemPropsType = {
   $typeItem?: string;
 };
 
-export const MenuItem = styled.li<MenuItemPropsType>`
+const Menu = styled.ul<MenuPropsType>`
+  display: flex;
+  gap: 30px;
+  flex-direction: ${props => props.direction || 'row'};
+`;
+
+const Link = styled.a`
+  font-weight: 300;
+  font-size: 18px;
+`
+
+const MenuItem = styled.li<MenuItemPropsType>`
   &:hover {
     ${Link} {
       color: ${theme.colors.firstBgBtn};
@@ -36,3 +50,9 @@ export const MenuItem = styled.li<MenuItemPropsType>`
     }
   `}
 `;
+
+export const S = {
+  Menu,
+  MenuItem,
+  Link
+};

@@ -16,3 +16,11 @@ export const AnimationBorderEffect = keyframes`
     border-color: ${theme.colors.fontColorFour};
   }
 `
+
+export const AnimationButton = keyframes`
+  from {
+    transform: scale(1);
+  } to {
+    transform: scale(1.2);
+  }
+`

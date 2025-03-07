@@ -31,5 +31,6 @@ export const theme = {
     laptop: 'screen and (max-width: 1199px)',
     tablet: 'screen and (max-width: 768px)',
     mobile: 'screen and (max-width: 576px)',
+    desktop: 'screen and (min-width: 1210px)',
   }
 }

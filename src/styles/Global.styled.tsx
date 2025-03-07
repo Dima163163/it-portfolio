@@ -18,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     color: ${theme.colors.fontColorFirst};
     font-family: 'Arodora Pro', sans-serif;
+    min-width: 375px;
   }
 
   a {
@@ -34,5 +35,13 @@ export const GlobalStyle = createGlobalStyle`
   button {
     border: none;
     background-color: unset;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    a::after,
+    a::before {
+      animation: none !important;
+    }
   }
 `;

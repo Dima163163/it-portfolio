@@ -1,26 +1,16 @@
-import styled from 'styled-components';
-import { Slider } from '../../../components/Slider/Slider';
+import { Slider } from '../../../components/slider/Slider';
 import { SectionTitle } from '../../../components/sectionTilte/SectionTitle';
 import { Container } from '../../../components/container/Container';
-import { theme } from '../../../styles/Theme';
+import { S } from './Portfolio_Styles';
+import React from 'react';
 
-export const Portfolio = () => {
+export const Portfolio: React.FC = () => {
   return (
-    <StyledPortfolio id={'portfolio'}>
+    <S.Portfolio id={'portfolio'}>
       <Container>
         <SectionTitle>Portfolio</SectionTitle>
         <Slider />
       </Container>
-    </StyledPortfolio>
+    </S.Portfolio>
   );
 };
-
-const StyledPortfolio = styled.section`
-  background: ${theme.colors.primaryBg};
-  text-align: center;
-  padding: 94px 0 100px;
-
-  @media ${theme.media.mobile} {
-    padding: 90px 0;
-  }
-`;

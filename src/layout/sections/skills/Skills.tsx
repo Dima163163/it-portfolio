@@ -1,9 +1,9 @@
-import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import { Skill } from './skill/Skill';
 import { SectionTitle } from '../../../components/sectionTilte/SectionTitle';
 import { Container } from '../../../components/container/Container';
-import { theme } from '../../../styles/Theme';
+import { S } from './Skills_Styles';
+import React from 'react';
 
 type SkillItemPropsType = {
   iconId: string;
@@ -76,9 +76,9 @@ const skillsArr: SkillsArrPropsType = [
   }
 ];
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
-    <StyledSkills id={'skills'}>
+    <S.Skills id={'skills'}>
       <Container>
         <SectionTitle>My Skills</SectionTitle>
         <FlexWrapper $wrap={'wrap'} $gap={'30px'} $justify={'center'}>
@@ -93,17 +93,8 @@ export const Skills = () => {
             ))}
         </FlexWrapper>
       </Container>
-    </StyledSkills>
+    </S.Skills>
   );
 };
 
-const StyledSkills = styled.section`
-  padding: 50px 0;
-  text-align: center;
 
-  @media ${theme.media.mobile} {
-    ${FlexWrapper} {
-      gap: 25px
-    }
-  }
-`;

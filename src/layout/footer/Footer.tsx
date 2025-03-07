@@ -1,141 +1,56 @@
-import styled from 'styled-components';
 import { FlexWrapper } from '../../components/flexWrapper/FlexWrapper';
 import { Logo } from '../../components/logo/Logo';
-import { BtnEllipse } from '../../components/btnEllipse/BtnEllipse';
 import { Icon } from '../../components/icon/Icon';
 import { Container } from '../../components/container/Container';
-import { theme } from '../../styles/Theme';
-import { FooterMenu } from './footerMenu/FooterMenu';
+import { Menu } from '../../components/menu/Menu';
+import { S } from './Footer_Styles';
+import React from 'react';
+import { BtnEllipse } from '../../components/btnEllipse/BtnEllipse';
 
 const items = ['Home', 'About me', 'Portfolio', 'Contact'];
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   return (
-    <StyledFooter>
+    <S.Footer>
       <Container>
-        <FooterContent>
-          <FooterMenu  menuItems={items} />
+        <S.FooterContent>
+          <Menu menuItems={items} direction={'column'} />
           <FlexWrapper $direction='column'>
-            <FooterTitle>Contact:</FooterTitle>
-            <FooterList>
-              <FooterItem>
-                Inst: <FooterLink href='#'>timdim</FooterLink>
-              </FooterItem>
-              <FooterItem>
+            <S.FooterTitle>Contact:</S.FooterTitle>
+            <S.FooterList>
+              <S.FooterItem>
+                Inst: <S.FooterLink href='#'>timdim</S.FooterLink>
+              </S.FooterItem>
+              <S.FooterItem>
                 Email:{' '}
-                <FooterLink href='mailto:Email: notitanic33@gmail.com'>
+                <S.FooterLink href='mailto:Email: notitanic33@gmail.com'>
                   timdim@gmail.com
-                </FooterLink>
-              </FooterItem>
-              <FooterItem>
+                </S.FooterLink>
+              </S.FooterItem>
+              <S.FooterItem>
                 Calls:{' '}
-                <FooterLink href='tel:+78467777777'>
+                <S.FooterLink href='tel:+78467777777'>
                   +7 (846) - 777 - 77 - 77
-                </FooterLink>
-              </FooterItem>
-            </FooterList>
+                </S.FooterLink>
+              </S.FooterItem>
+            </S.FooterList>
           </FlexWrapper>
           <FlexWrapper $direction={'column'} $justify={'space-between'} $gap={'55px'}>
-            <FooterBox>
+            <S.FooterBox>
               <Logo />
-              <BtnEllipse as={'a'} href='#main' aria-label={'button top site'}>
+              <BtnEllipse as={'a'} href='#home' aria-label={'button top site'}>
                 <Icon
                   viewBox='0 0 36 36'
                   iconId='arrowTop'
                 />
               </BtnEllipse>
-            </FooterBox>
-            <CopyrightWrapper>
-              <Copyright>Copyright &nbsp; 2021, TimDim</Copyright>
-            </CopyrightWrapper>
+            </S.FooterBox>
+            <S.CopyrightWrapper>
+              <S.Copyright>Copyright &nbsp; 2021, TimDim</S.Copyright>
+            </S.CopyrightWrapper>
           </FlexWrapper>
-        </FooterContent>
+        </S.FooterContent>
       </Container>
-    </StyledFooter>
+    </S.Footer>
   );
 };
-
-const StyledFooter = styled.footer`
-  background-color: ${theme.colors.primaryBg};
-  padding: 50px 0;
-`;
-
-
-const FooterTitle = styled.h3`
-  font-weight: 300;
-  font-size: 18px;
-  color: ${theme.colors.fontColorSecond};
-  margin-bottom: 18px;
-`;
-
-const FooterList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-`;
-
-const FooterItem = styled.li`
-  font-weight: 300;
-  font-size: 18px;
-  color: ${theme.colors.fontColorSecond};
-`;
-
-const FooterLink = styled.a`
-  font-weight: 300;
-  font-size: 18px;
-  color: ${theme.colors.fontColorSecond};
-`;
-
-const FooterBox = styled.div`
-  display: flex;
-  gap: 32px;
-  justify-content: space-between;
-
-  ${BtnEllipse} {
-    svg {
-      width: 35px;
-      height: 35px;
-    }
-  }
-`;
-
-const CopyrightWrapper = styled.div`
-  padding-left: 15px;
-`;
-
-const Copyright = styled.span`
-  font-weight: 300;
-  font-size: 18px;
-  color: ${theme.colors.fontColorSecond};
-  display: inline-block;
-`;
-
-
-const FooterContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  max-width: 773px;
-  width: 100%;
-  margin: 0 auto;
-  flex-wrap: wrap;
-
-  ${FooterLink} {
-    font-size: 18px;
-    font-weight: 300;
-    color: ${theme.colors.fontColorSecond};
-
-    &:hover {
-      color: ${theme.colors.firstBgBtn}
-    }
-  }
-
-  @media ${theme.media.tablet} {
-    gap: 50px;
-
-
-    ${FlexWrapper}:last-child {
-      width: 100%;
-      text-align: center;
-    }
-  }
-`;
