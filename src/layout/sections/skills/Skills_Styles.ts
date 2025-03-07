@@ -48,11 +48,15 @@ const Skill = styled.div`
     height: 160px;
     padding: 20px 20px 20px 20px;
     gap: 20px;
+
+    &:last-child {
+      gap: 5px;
+    }
   }
 `;
 
 const SkillTitle = styled.h3`
-  ${font({ weight: 300, color: `${theme.colors.fontColorSecond}`, Fmax: 24, Fmin: 14})};
+  ${font({ weight: 300, color: `${theme.colors.fontColorSecond}`, Fmax: 27, Fmin: 16})};
 `;
 
 
