@@ -10,7 +10,7 @@ type WrapperPhotoPropsType = {
 };
 
 const About = styled.section`
-  padding: 50px 0;
+  padding: 50px 0 140px;
   overflow: hidden;
 
   @media ${theme.media.tablet} {

@@ -10,17 +10,19 @@ type MainSkillPropsType = {
 const Main = styled.section`
   background-color: ${theme.colors.primaryBg};
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 230px;
 
-  @media (max-width: 1060px){
-    padding-top: 120px;
+  @media ${theme.media.laptop} {
+    padding-top: 135px;
   }
 `;
 
 const MainContent = styled.div`
+  padding-bottom: 142px;
   max-width: 447px;
 
   @media ${theme.media.laptop} {
+    padding-bottom: 0;
     min-width: 100%;
   }
 
@@ -32,24 +34,30 @@ const MainContent = styled.div`
 const Greeting = styled.span`
   ${font({family: '"NEXT ART", sans-serif', weight: 600, Fmax: 48, Fmin: 27})};
   display: block;
-  margin-bottom: 27px;
+  margin-bottom: 8px;
 
   @media ${theme.media.tablet} {
     font-size: 27px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 `;
 
 const MainName = styled.p`
-  ${font({family: '"NEXT ART", sans-serif', weight: 700, Fmax: 72, Fmin: 27})};
+  ${font({family: '"NEXT ART", sans-serif', weight: 700, Fmax: 72, Fmin: 52})};
+  line-height: 120%;
 
   & + & {
     margin-bottom: 27px;
   }
 
   @media ${theme.media.tablet} {
+    & {
+      line-height: 110%;
+      margin-bottom: 2px;
+    }
+
     & + & {
-      margin-bottom: 12px;
+      margin-bottom: 20px;
     }
   }
 `;

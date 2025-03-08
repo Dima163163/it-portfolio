@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
               </S.FooterItem>
             </S.FooterList>
           </FlexWrapper>
-          <FlexWrapper $direction={'column'} $justify={'space-between'} $gap={'55px'}>
+          <FlexWrapper $direction={'column'} $justify={'space-between'}>
             <S.FooterBox>
               <Logo />
               <BtnEllipse as={'a'} href='#home' aria-label={'button top site'}>

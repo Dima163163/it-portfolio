@@ -23,7 +23,7 @@ const Slider = styled.div`
 
     ${BtnEllipse}:first-child {
       order: 1;
-      margin-right: 50px;
+      margin-right: 58px;
     }
 
     ${BtnEllipse}:last-child {
@@ -83,11 +83,12 @@ const Image = styled.div<ImagePropsType>`
     max-width: 100%;
     min-width: 100%;
     height: 318px;
+    background-position: 22%;
   }
 `;
 
 const SlideContent = styled.div`
-  padding-top: 42px;
+  padding-top: 32px;
   max-width: 296px;
 
   @media ${theme.media.laptop} {
@@ -100,7 +101,7 @@ const Title = styled.h3`
   font-weight: 300;
   font-size: 24px;
   color: ${theme.colors.fontColorSecond};
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 `;
 
 const Text = styled.p`
@@ -108,20 +109,20 @@ const Text = styled.p`
   font-size: 18px;
   color: ${theme.colors.fontColorSecond};
   max-width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 `;
 
 const Link = styled.a`
-  display: inline-block;
+  display: inline-flex;
+  justify-content: space-between;
   color: ${theme.colors.firstBgBtn};
+  gap: 8px;
   cursor: pointer;
-  padding: 3px;
   font-size: 18px;
   font-weight: 300;
+  max-width: 63px;
+  width: 100%;
 
-  span {
-    margin-right: 7px;
-  }
 
   &:hover {
     color: ${theme.colors.fontColorSecond};
@@ -136,7 +137,7 @@ const Link = styled.a`
 
 const BtnIconWrapper = styled.div`
   display: inline-block;
-  width: 14px;
+  min-width: 14px;
   height: 8px;
 
   svg {
@@ -164,7 +165,7 @@ const Slides = styled.div`
 
   @media ${theme.media.laptop} {
     max-width: 100%;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 `;
 

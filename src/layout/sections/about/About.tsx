@@ -18,7 +18,7 @@ export const About: React.FC = () => {
             $width='792px'
             $height='792px'
             $boxshadow='0 4px 70px rgba(255, 255, 255, 0.25)'
-            $inset='60px auto auto -100px'
+            $inset='86px auto auto -58px'
             >
               <svg
                 viewBox='70 70 792 792'
@@ -39,7 +39,7 @@ export const About: React.FC = () => {
             $width='356px'
             $height='356px'
             $boxshadow='0 4px 70px rgba(226, 162, 0, 0.25)'
-            $inset='40px 60px auto auto'
+            $inset='38px 70px auto auto'
             >
               <svg
                 viewBox='70 66 356 356'
@@ -60,7 +60,7 @@ export const About: React.FC = () => {
             $width='486px'
             $height='486px'
             $boxshadow='0 4px 70px rgba(0, 193, 236, 0.25)'
-            $inset='auto 75px 0 auto'
+            $inset='auto 71px -85px auto'
             >
               <svg
                 viewBox='70 66 486 486'

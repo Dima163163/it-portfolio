@@ -13,7 +13,7 @@ export const Main: React.FC = () => {
     <S.Main id={'home'}>
       <Container>
         <FlexWrapper
-          $align={'center'}
+          $align={'end'}
           $justify={'space-between'}
           $wrap={'wrap'}
         >
