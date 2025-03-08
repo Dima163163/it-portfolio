@@ -59,6 +59,7 @@ const DescriptionWrapper = styled.div`
   margin-bottom: 27px;
   padding-right: 10px;
   overflow: hidden;
+  max-width: min-content;
 
   border-right: .15em solid ${theme.colors.fontColorFour};
   animation: ${TextAnimation} 3s steps(25, end),
