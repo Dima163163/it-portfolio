@@ -3,8 +3,8 @@ import photo from '../../../assets/images/photo.png';
 import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import { Ellipse } from '../../../components/ellipse/Ellipse';
 import { Container } from '../../../components/container/Container';
-import React from 'react';
 import { S } from './Main_Styles';
+import React from 'react';
 
 
 
@@ -26,7 +26,7 @@ export const Main: React.FC = () => {
             </S.DescriptionWrapper>
             <S.MainInfo>
               I've been doing front-end development for a year now. Do you need
-              a site layout, or maybe a turnkey website? Then contact me
+              a site layout, or maybe a turnkey website? Then contact me!
             </S.MainInfo>
             <Button>Contact me</Button>
           </S.MainContent>
