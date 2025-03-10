@@ -17,6 +17,7 @@ const Skills = styled.section`
 const IconWrapper = styled.div`
   width: 120px;
   height: 120px;
+  color: ${theme.colors.fourBg};
 
   @media ${theme.media.tablet} {
     width: 50px;
@@ -56,10 +57,8 @@ const Skill = styled.div`
 `;
 
 const SkillTitle = styled.h3`
-  ${font({ weight: 300, color: `${theme.colors.fontColorSecond}`, Fmax: 27, Fmin: 16})};
+  ${font({ weight: 300, color: `${theme.colors.fontColorSecond}`, Fmax: 24, Fmin: 16})};
 `;
-
-
 
 export const S = {
   Skills,

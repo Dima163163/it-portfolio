@@ -1,7 +1,10 @@
 import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import photo1 from '../../../assets/images/photo-about-1.png';
+import photo1Webp from '../../../assets/images/photo-about-1.webp';
 import photo2 from '../../../assets/images/photo-about-2.png';
+import photo2Webp from '../../../assets/images/photo-about-2.webp';
 import photo3 from '../../../assets/images/photo-about-3.png';
+import photo3Webp from '../../../assets/images/photo-about-3.webp';
 import { Ellipse } from '../../../components/ellipse/Ellipse';
 import { Container } from '../../../components/container/Container';
 import { SectionTitle } from '../../../components/sectionTilte/SectionTitle';
@@ -81,12 +84,18 @@ export const About: React.FC = () => {
             <FlexWrapper $direction={'column'} $gap={'196px'}>
               <S.WrapperPhoto $width={'330px'} $height={'378px'}>
                 <S.BorderPhoto>
-                  <S.Photo src={photo1} alt={photo1} />
+                  <picture>
+                    <source srcSet={photo1Webp} type='image/webp'/>
+                    <S.Photo src={photo1} alt={photo1} />
+                  </picture>
                 </S.BorderPhoto>
               </S.WrapperPhoto>
               <S.WrapperPhoto $width={'307px'} $height={'339px'}>
                 <S.BorderPhoto>
-                  <S.Photo src={photo2} alt={photo2} />
+                  <picture>
+                    <source srcSet={photo2Webp} type='image/webp'/>
+                    <S.Photo src={photo2} alt={photo2} />
+                  </picture>
                 </S.BorderPhoto>
               </S.WrapperPhoto>
             </FlexWrapper>
@@ -118,7 +127,10 @@ export const About: React.FC = () => {
             <S.PhotoBox>
               <S.WrapperPhoto $width={'340px'} $height={'465px'}>
                 <S.BorderPhoto>
-                  <S.Photo src={photo3} alt={photo3} />
+                  <picture>
+                    <source srcSet={photo3Webp} type='image/webp'/>
+                    <S.Photo src={photo3} alt={photo3} />
+                  </picture>
                 </S.BorderPhoto>
               </S.WrapperPhoto>
             </S.PhotoBox>

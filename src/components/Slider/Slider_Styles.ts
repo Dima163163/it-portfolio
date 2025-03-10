@@ -3,10 +3,6 @@ import { theme } from '../../styles/Theme';
 import { BtnEllipse } from '../btnEllipse/BtnEllipse';
 import { AnimationButton } from '../../styles/animations/Animations';
 
-type ImagePropsType = {
-  src: string;
-};
-
 type SlidePropsType = {
   $idactiveslide: number;
 };
@@ -63,27 +59,21 @@ const Slide = styled.div<SlidePropsType>`
   }
 `;
 
-const Image = styled.div<ImagePropsType>`
-  min-width: 493px;
+const Image = styled.img`
+  max-width: 493px;
+  width: 100%;
   height: 500px;
-  overflow: hidden;
-  position: relative;
   border-radius: 29px;
-  background-image: url(${(props) => props.src});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 15%;
+  object-fit: cover;
+  object-position: 15%;
 
   @media ${theme.media.tablet} {
     max-width: 100%;
-    min-width: 100%;
   }
 
   @media ${theme.media.mobile} {
     max-width: 100%;
-    min-width: 100%;
     height: 318px;
-    background-position: 22%;
   }
 `;
 

@@ -6,6 +6,7 @@ type SlidePropType = {
   title: string;
   text: string;
   src: string;
+  srcWebp: string;
 };
 
 type SlidesPropsType = {
@@ -23,6 +24,7 @@ export const Slides: React.FC<SlidesPropsType> = (props: SlidesPropsType) => {
             title={slide.title}
             text={slide.text}
             src={slide.src}
+            srcWebp={slide.srcWebp}
             idactiveslide={props.idactiveslide}
           />
         ))}

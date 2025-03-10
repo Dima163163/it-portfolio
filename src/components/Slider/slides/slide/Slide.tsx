@@ -6,13 +6,17 @@ type SlidePropsType = {
   title: string;
   text: string;
   src: string;
+  srcWebp: string;
   idactiveslide: number;
 };
 
 export const Slide: React.FC<SlidePropsType> = (props: SlidePropsType) => {
   return (
     <S.Slide $idactiveslide={props.idactiveslide}>
-      <S.Image src={props.src} />
+      <picture>
+        <source srcSet={props.srcWebp} type='image/webp'/>
+        <S.Image src={props.src} />
+      </picture>
       <S.SlideContent>
         <S.Title>{props.title}</S.Title>
         <S.Text>{props.text}</S.Text>

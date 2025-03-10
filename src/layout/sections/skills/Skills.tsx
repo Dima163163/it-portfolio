@@ -96,5 +96,3 @@ export const Skills: React.FC = () => {
     </S.Skills>
   );
 };
-
-

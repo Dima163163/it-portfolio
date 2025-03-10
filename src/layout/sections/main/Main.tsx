@@ -1,5 +1,6 @@
 import { Button } from '../../../components/button/Button';
 import photo from '../../../assets/images/photo.png';
+import photoWebp from '../../../assets/images/photo.webp';
 import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import { Ellipse } from '../../../components/ellipse/Ellipse';
 import { Container } from '../../../components/container/Container';
@@ -56,7 +57,10 @@ export const Main: React.FC = () => {
             <S.MainSkill $inset={'auto auto 45% 0'}>JS</S.MainSkill>
             <S.MainSkill $inset={'auto auto 20% 3%'}>&lt;/</S.MainSkill>
             <S.MainSkill $inset={'2% 40% auto auto'}>TS</S.MainSkill>
-            <S.Photo src={photo} alt={photo}/>
+            <picture>
+              <source srcSet={photoWebp} type='image/webp'/>
+              <S.Photo src={photo} alt={photo}/>
+            </picture>
           </S.ImageWrapper>
         </FlexWrapper>
       </Container>
