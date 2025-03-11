@@ -12,7 +12,9 @@ type SlidePropsType = {
 
 export const Slide: React.FC<SlidePropsType> = (props: SlidePropsType) => {
   return (
-    <S.Slide $idactiveslide={props.idactiveslide}>
+    <S.Slide
+      // $idactiveslide={props.idactiveslide}
+    >
       <picture>
         <source srcSet={props.srcWebp} type='image/webp'/>
         <S.Image src={props.src} alt='image portfolio' />

@@ -6,8 +6,8 @@ import { Ellipse } from '../../../components/ellipse/Ellipse';
 import { Container } from '../../../components/container/Container';
 import { S } from './Main_Styles';
 import React from 'react';
-
-
+import Typewriter from 'typewriter-effect';
+import './../../../styles/typewritter.css';
 
 export const Main: React.FC = () => {
   return (
@@ -22,9 +22,16 @@ export const Main: React.FC = () => {
             <S.Greeting>Hello</S.Greeting>
             <S.MainName>I’m&nbsp;Dmitry</S.MainName>
             <S.MainName>Khlopov</S.MainName>
-            <S.DescriptionWrapper>
-              <S.Description>I’m frontend developer</S.Description>
-            </S.DescriptionWrapper>
+            <S.Description>
+              <p>I’m frontend developer</p>
+              <Typewriter
+                options={{
+                  strings: ['I’m frontend developer', 'React developer'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </S.Description>
             <S.MainInfo>
               I've been doing front-end development for a year now. Do you need
               a site layout, or maybe a turnkey website? Then contact me!

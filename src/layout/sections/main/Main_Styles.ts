@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../../styles/Theme';
 import { font } from '../../../styles/Common';
-import { AnimationBorderEffect, TextAnimation } from '../../../styles/animations/Animations';
 
 type MainSkillPropsType = {
   $inset?: string;
@@ -62,26 +61,15 @@ const MainName = styled.p`
   }
 `;
 
-const DescriptionWrapper = styled.div`
-  display: inline-block;
-  margin-bottom: 27px;
-  padding-right: 10px;
-  overflow: hidden;
-  max-width: min-content;
-
-  border-right: .15em solid ${theme.colors.fontColorFour};
-  animation: ${TextAnimation} 3s steps(25, end),
-                ${AnimationBorderEffect} 0.7s infinite;
-
-  @media ${theme.media.tablet} {
-    margin-bottom: 12px;
-  }
-`
-
 
 const Description = styled.h1`
   ${font({family: '"NEXT ART", sans-serif', weight: 700, Fmax: 34, Fmin: 22})};
   white-space: nowrap;
+  margin-bottom: 27px;
+
+  p {
+    display: none;
+  }
 `;
 
 const MainInfo = styled.p`
@@ -163,7 +151,6 @@ export const S = {
   Main,
   MainContent,
   Greeting,
-  DescriptionWrapper,
   MainName,
   Description,
   MainInfo,
