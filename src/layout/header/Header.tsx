@@ -10,7 +10,6 @@ import { FlexWrapper } from '../../components/flexWrapper/FlexWrapper';
 const items = ['Home', 'Skills', 'About me', 'Portfolio', 'Contact'];
 
 export const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
   const breakpoint= 768;
 
@@ -21,22 +20,12 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('resize', handleWidthResize)
   }, [])
 
-  const openMenu = () => {
-    setIsOpen(!isOpen);
-
-    if (!isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-  };
-
   return (
     <S.Header>
       <Container>
         <FlexWrapper $justify={'space-between'} $align={'center'}>
           <Logo />
-          {width <= breakpoint ? <MobileMenu menuItems={items} isOpen={isOpen} openMenu={openMenu}/> : <DesktopMenu menuItems={items} />}
+          {width <= breakpoint ? <MobileMenu menuItems={items} /> : <DesktopMenu menuItems={items} />}
         </FlexWrapper>
       </Container>
     </S.Header>

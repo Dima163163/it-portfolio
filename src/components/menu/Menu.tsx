@@ -5,7 +5,7 @@ type MenuPropsType = {
   menuItems: string[],
   direction?: string,
   typeItem?: string,
-  openMenu?: () => void
+  onBurgerBtnClick?: () => void
 }
 
 export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
@@ -14,7 +14,7 @@ export const Menu: React.FC<MenuPropsType> = (props: MenuPropsType) => {
       {props.menuItems.length > 0 &&
         props.menuItems.map((item, i) => (
           <S.MenuItem role='menuitem' key={i} $typeItem={props.typeItem}>
-            <S.Link onClick={() => props.openMenu && props.openMenu()} href={`#${item.toLowerCase()}`}>{item}</S.Link>
+            <S.Link href={`#${item.toLowerCase()}`}>{item}</S.Link>
           </S.MenuItem>
         ))}
     </S.Menu>

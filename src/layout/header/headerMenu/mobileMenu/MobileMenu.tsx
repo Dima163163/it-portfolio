@@ -1,30 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Menu } from '../../../../components/menu/Menu';
 import { S } from '../HeaderMenu_Styles';
 
 type MobileMenuPropsType = {
   menuItems: Array<string>;
-  isOpen: boolean;
-  openMenu?: () => void;
 };
 
 export const MobileMenu: React.FC<MobileMenuPropsType> = (
   props: MobileMenuPropsType
 ) => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  const onBurgerBtnClick = () => {
+    setMenuIsOpen(!menuIsOpen);
+
+    if (!menuIsOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  };
   return (
     <S.MobileMenu>
       <S.BurgerButton
-        $isOpen={props.isOpen}
-        onClick={props.openMenu}
-        aria-haspopup={!props.isOpen}
-        aria-label={props.isOpen ? 'Закрыть окно' : 'Открыть окно'}
+        $isOpen={menuIsOpen}
+        onClick={onBurgerBtnClick}
+        aria-haspopup={!menuIsOpen}
+        aria-label={menuIsOpen ? 'Закрыть окно' : 'Открыть окно'}
       >
         <span></span>
         <span></span>
       </S.BurgerButton>
 
-      <S.MobileMenuPopup $isOpen={props.isOpen}>
-        <Menu menuItems={props.menuItems} direction={'column'} openMenu={props.openMenu}/>
+      <S.MobileMenuPopup $isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
+        <Menu menuItems={props.menuItems} direction={'column'} onBurgerBtnClick={onBurgerBtnClick}/>
       </S.MobileMenuPopup>
     </S.MobileMenu>
   );

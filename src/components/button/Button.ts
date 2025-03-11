@@ -14,6 +14,7 @@ export const Button = styled.button`
   font-weight: 700;
   font-size: 18px;
   color: ${theme.colors.fontColorThird};
+  transition: all 0.6s;
 
   &:hover {
     background: none;

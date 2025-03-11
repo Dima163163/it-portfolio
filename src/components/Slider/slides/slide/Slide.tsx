@@ -15,12 +15,12 @@ export const Slide: React.FC<SlidePropsType> = (props: SlidePropsType) => {
     <S.Slide $idactiveslide={props.idactiveslide}>
       <picture>
         <source srcSet={props.srcWebp} type='image/webp'/>
-        <S.Image src={props.src} />
+        <S.Image src={props.src} alt='image portfolio' />
       </picture>
       <S.SlideContent>
         <S.Title>{props.title}</S.Title>
         <S.Text>{props.text}</S.Text>
-        <S.Link>
+        <S.Link href={'#'}>
           <span>More</span>
           <S.BtnIconWrapper>
             <Icon viewBox='2 1 14 10' iconId='btnArrow' />

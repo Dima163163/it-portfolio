@@ -61,6 +61,8 @@ const MobileMenuPopup = styled.div<{ $isOpen: boolean }>`
   transform: translateX(100%);
   transition: 0.6s all;
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   ul {
     flex-direction: column;
@@ -70,8 +72,6 @@ const MobileMenuPopup = styled.div<{ $isOpen: boolean }>`
   ${(props) =>
     props.$isOpen &&
     css<{ $isOpen: boolean }>`
-    justify-content: center;
-    align-items: center;
     transform: translateX(0);
   `}
 `;
