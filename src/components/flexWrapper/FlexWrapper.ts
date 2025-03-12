@@ -16,5 +16,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   flex-wrap: ${(props) => props.$wrap || 'nowrap'};
   gap: ${(props) => props.$gap || '0px'};
   position: relative;
-  height: 100%;
+  min-height: 100%;
 `;

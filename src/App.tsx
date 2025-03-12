@@ -8,20 +8,42 @@ import { Portfolio } from './layout/sections/portfolio/Portfolio';
 import { Contacts } from './layout/contacts/Contacts';
 import { Skills } from './layout/sections/skills/Skills';
 import { theme } from './styles/Theme';
+import { Particle } from './components/particle/Particle';
+import { createContext, useState } from 'react';
+import { GoToBtn } from './components/goToBtn/GoToBtn';
+
+type MenuContextPropsType = {
+  activeItem: string,
+  changeItemMenu: (value: string) => void
+}
+export const MenuContext = createContext<MenuContextPropsType>({
+  activeItem: '',
+  changeItemMenu: () => {}
+})
 
 function App() {
+  const [activeItem, setActiveItem] = useState('Home');
+
+  const changeItemMenu = (value: string) => {
+    setActiveItem(value)
+  };
+
   return (
-    <div className='App'>
-      <Header />
-      <StyledMain>
-        <Main />
-        <Skills />
-        <About />
-        <Portfolio />
-        <Contacts />
-      </StyledMain>
-      <Footer />
-    </div>
+    <MenuContext.Provider value={{activeItem, changeItemMenu}}>
+      <div className='App'>
+          <Particle/>
+          <Header />
+          <StyledMain>
+            <Main />
+            <Skills />
+            <About />
+            <Portfolio />
+            <Contacts />
+          </StyledMain>
+          <Footer />
+          <GoToBtn/>
+      </div>
+    </MenuContext.Provider>
   );
 }
 

@@ -59,7 +59,7 @@ const MobileMenuPopup = styled.div<{ $isOpen: boolean }>`
   z-index: 200;
   background-color: ${theme.colors.primaryBg};
   transform: translateX(100%);
-  transition: 0.6s all;
+  transition: 1s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,12 +67,17 @@ const MobileMenuPopup = styled.div<{ $isOpen: boolean }>`
   ul {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    transition: ${theme.animation.transition};
   }
 
   ${(props) =>
     props.$isOpen &&
     css<{ $isOpen: boolean }>`
     transform: translateX(0);
+    & ul {
+      gap: 30px;
+    }
   `}
 `;
 

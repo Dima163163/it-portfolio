@@ -1,9 +1,15 @@
 import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import photo1 from '../../../assets/images/photo-about-1.png';
+import photo1_2x from '../../../assets/images/photo-about-1@2x.png';
+import photo1_3x from '../../../assets/images/photo-about-1@3x.png';
 import photo1Webp from '../../../assets/images/photo-about-1.webp';
 import photo2 from '../../../assets/images/photo-about-2.png';
+import photo2_2x from '../../../assets/images/photo-about-2@2x.png';
+import photo2_3x from '../../../assets/images/photo-about-2@3x.png';
 import photo2Webp from '../../../assets/images/photo-about-2.webp';
 import photo3 from '../../../assets/images/photo-about-3.png';
+import photo3_2x from '../../../assets/images/photo-about-3@2x.png';
+import photo3_3x from '../../../assets/images/photo-about-3@3x.png';
 import photo3Webp from '../../../assets/images/photo-about-3.webp';
 import { Ellipse } from '../../../components/ellipse/Ellipse';
 import { Container } from '../../../components/container/Container';
@@ -86,6 +92,7 @@ export const About: React.FC = () => {
                 <S.BorderPhoto>
                   <picture>
                     <source srcSet={photo1Webp} type='image/webp'/>
+                    <source srcSet={`${photo1_2x} 2x, ${photo1_3x} 3x`} />
                     <S.Photo src={photo1} alt={photo1} />
                   </picture>
                 </S.BorderPhoto>
@@ -94,6 +101,7 @@ export const About: React.FC = () => {
                 <S.BorderPhoto>
                   <picture>
                     <source srcSet={photo2Webp} type='image/webp'/>
+                    <source srcSet={`${photo2_2x} 2x, ${photo2_3x} 3x`} />
                     <S.Photo src={photo2} alt={photo2} />
                   </picture>
                 </S.BorderPhoto>
@@ -129,6 +137,8 @@ export const About: React.FC = () => {
                 <S.BorderPhoto>
                   <picture>
                     <source srcSet={photo3Webp} type='image/webp'/>
+                    <source srcSet={`${photo3_2x} 2x, ${photo3_3x} 3x`} />
+                    <source srcSet={photo3Webp}/>
                     <S.Photo src={photo3} alt={photo3} />
                   </picture>
                 </S.BorderPhoto>

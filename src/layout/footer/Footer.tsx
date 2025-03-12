@@ -1,20 +1,16 @@
 import { FlexWrapper } from '../../components/flexWrapper/FlexWrapper';
 import { Logo } from '../../components/logo/Logo';
-import { Icon } from '../../components/icon/Icon';
 import { Container } from '../../components/container/Container';
 import { Menu } from '../../components/menu/Menu';
 import { S } from './Footer_Styles';
 import React from 'react';
-import { BtnEllipse } from '../../components/btnEllipse/BtnEllipse';
-
-const items = ['Home', 'About me', 'Portfolio', 'Contact'];
 
 export const Footer: React.FC = () => {
   return (
     <S.Footer>
       <Container>
         <S.FooterContent>
-          <Menu menuItems={items} direction={'column'} />
+          <Menu direction={'column'} />
           <FlexWrapper $direction='column'>
             <S.FooterTitle>Contact:</S.FooterTitle>
             <S.FooterList>
@@ -36,15 +32,7 @@ export const Footer: React.FC = () => {
             </S.FooterList>
           </FlexWrapper>
           <FlexWrapper $direction={'column'} $justify={'space-between'}>
-            <S.FooterBox>
-              <Logo />
-              <BtnEllipse as={'a'} href='#home' aria-label={'button top site'}>
-                <Icon
-                  viewBox='0 0 36 36'
-                  iconId='arrowTop'
-                />
-              </BtnEllipse>
-            </S.FooterBox>
+            <Logo />
             <S.CopyrightWrapper>
               <S.Copyright>Copyright &nbsp; 2021, TimDim</S.Copyright>
             </S.CopyrightWrapper>

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { theme } from '../../styles/Theme';
-import { BtnEllipse } from '../../components/btnEllipse/BtnEllipse';
 import { FlexWrapper } from '../../components/flexWrapper/FlexWrapper';
 
 const Footer = styled.footer`
+position: relative;
   background-color: ${theme.colors.primaryBg};
   padding: 50px 0;
 
@@ -31,7 +31,11 @@ const FooterTitle = styled.h3`
 const FooterList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 38px;
+
+  @media ${theme.media.laptop} {
+    gap: 18px;
+  }
 `;
 
 const FooterItem = styled.li`
@@ -46,19 +50,6 @@ const FooterLink = styled.a`
   color: ${theme.colors.fontColorSecond};
 `;
 
-const FooterBox = styled.div`
-  display: flex;
-  gap: 70px;
-  justify-content: space-between;
-
-  ${BtnEllipse} {
-    svg {
-      width: 35px;
-      height: 35px;
-    }
-  }
-`;
-
 const CopyrightWrapper = styled.div`
   padding-left: 15px;
 
@@ -67,7 +58,7 @@ const CopyrightWrapper = styled.div`
   }
 `;
 
-const Copyright = styled.span`
+const Copyright = styled.small`
   font-weight: 300;
   font-size: 18px;
   color: ${theme.colors.fontColorSecond};
@@ -93,6 +84,7 @@ const FooterContent = styled.div`
     font-size: 18px;
     font-weight: 300;
     color: ${theme.colors.fontColorSecond};
+    transition: ${theme.animation.transition};
 
     &:hover {
       color: ${theme.colors.firstBgBtn}
@@ -122,7 +114,6 @@ export const S = {
   FooterList,
   FooterItem,
   FooterLink,
-  FooterBox,
   CopyrightWrapper,
   Copyright,
   FooterContent

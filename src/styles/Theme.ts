@@ -12,6 +12,7 @@ export const theme = {
     thirdBgBtn: '#937732',
     fourBgBtn: '#00c4f0',
 
+
     fontColorFirst: '#e4e4e4',
     fontColorSecond: '#fff',
     fontColorThird: '#000',
@@ -32,5 +33,9 @@ export const theme = {
     tablet: 'screen and (max-width: 768px)',
     mobile: 'screen and (max-width: 576px)',
     desktop: 'screen and (min-width: 1210px)',
+  },
+
+  animation: {
+    transition: '0.3s ease-in-out'
   }
 }

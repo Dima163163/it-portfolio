@@ -12,6 +12,7 @@ export const BtnEllipse = styled.button`
   align-items: center;
   cursor: pointer;
   color: ${theme.colors.fontColorFirst};
+  transition: ${theme.animation.transition};
 
   &:hover {
     background: transparent;

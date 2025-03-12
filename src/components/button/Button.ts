@@ -3,8 +3,7 @@ import { theme } from '../../styles/Theme';
 
 export const Button = styled.button`
   cursor: pointer;
-  height: 47px;
-  padding: 10px 38px 12px 41px;
+  padding: 10px 40px 10px 40px;
   border-radius: 6px;
   border: 2px solid transparent;
   box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
@@ -14,7 +13,7 @@ export const Button = styled.button`
   font-weight: 700;
   font-size: 18px;
   color: ${theme.colors.fontColorThird};
-  transition: all 0.6s;
+  transition: ${theme.animation.transition};
 
   &:hover {
     background: none;

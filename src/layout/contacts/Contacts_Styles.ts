@@ -3,7 +3,7 @@ import { theme } from '../../styles/Theme';
 import { Button } from '../../components/button/Button';
 
 const Contacts = styled.section`
-  background-image: linear-gradient(135deg, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
+  position: relative;
   text-align: center;
   padding: 100px 0;
 
@@ -43,6 +43,7 @@ const Field = styled.input`
   color: ${theme.colors.fontColorSecond};
   font-size: 20px;
   width: 100%;
+  transition: ${theme.animation.transition};
 
   &::placeholder {
     color: ${theme.colors.fontColorSecond};

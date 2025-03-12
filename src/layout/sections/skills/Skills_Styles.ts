@@ -4,6 +4,8 @@ import { theme } from '../../../styles/Theme';
 import { font } from '../../../styles/Common';
 
 const Skills = styled.section`
+  position: relative; 
+  background-image: linear-gradient(to top, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
   padding: 50px 0;
   text-align: center;
 
@@ -22,6 +24,11 @@ const IconWrapper = styled.div`
   @media ${theme.media.tablet} {
     width: 50px;
     max-height: 50px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 `
 

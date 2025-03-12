@@ -7,7 +7,7 @@ import { S } from './Header_Styles';
 import { Container } from '../../components/container/Container';
 import { FlexWrapper } from '../../components/flexWrapper/FlexWrapper';
 
-const items = ['Home', 'Skills', 'About me', 'Portfolio', 'Contact'];
+// const items = ['Home', 'Skills', 'About me', 'Portfolio', 'Contact'];
 
 export const Header: React.FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
       <Container>
         <FlexWrapper $justify={'space-between'} $align={'center'}>
           <Logo />
-          {width <= breakpoint ? <MobileMenu menuItems={items} /> : <DesktopMenu menuItems={items} />}
+          {width <= breakpoint ? <MobileMenu /> : <DesktopMenu />}
         </FlexWrapper>
       </Container>
     </S.Header>

@@ -11,12 +11,6 @@ const Logo = styled.a`
   font-size: 18px;
 `;
 
-const IconWrapper = styled.div`
-  width: 65px;
-  height: 48px;
-`
-
 export const S = {
-  Logo,
-  IconWrapper
+  Logo
 }
