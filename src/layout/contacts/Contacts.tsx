@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 export const Contacts: React.FC = () => {
   const form = useRef<ElementRef<'form'>>(null);
 
-  const sendEmail = (e: React.FormEvent) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
 
     if (!form.current) return;
@@ -25,6 +25,7 @@ export const Contacts: React.FC = () => {
           console.log('FAILED...', error.text);
         },
       );
+    e.target.reset();
   };
   return (
     <S.Contacts id={'contact'}>
