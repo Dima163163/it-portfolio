@@ -3,19 +3,6 @@ import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import { theme } from '../../../styles/Theme';
 import { font } from '../../../styles/Common';
 
-const Skills = styled.section`
-  position: relative; 
-  background-image: linear-gradient(to top, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
-  padding: 50px 0;
-  text-align: center;
-
-  @media ${theme.media.mobile} {
-    ${FlexWrapper} {
-      gap: 25px
-    }
-  }
-`;
-
 const IconWrapper = styled.div`
   width: 120px;
   height: 120px;
@@ -30,7 +17,11 @@ const IconWrapper = styled.div`
       height: 100%;
     }
   }
+  @media ${theme.media.mobile} {
+    margin-bottom: 10px;
+  }
 `
+
 
 const Skill = styled.div`
   border-radius: 29px;
@@ -45,12 +36,6 @@ const Skill = styled.div`
   gap: 30px;
   padding: 20px 20px 50px 20px;
 
-  &:last-child {
-    ${IconWrapper} {
-      height: 87px;
-    }
-  }
-
   @media ${theme.media.tablet} {
     width: 160px;
     height: 160px;
@@ -62,6 +47,27 @@ const Skill = styled.div`
     }
   }
 `;
+
+const Skills = styled.section`
+  position: relative; 
+  background-image: linear-gradient(to top, ${theme.colors.secondaryBg} 0%, ${theme.colors.thirdBg} 100%);
+  padding: 50px 0;
+  text-align: center;
+
+  ${FlexWrapper} div:last-child ${Skill} ${IconWrapper} {
+    height: 87px;
+    svg {
+      height: 87px;
+    }
+  }
+
+  @media ${theme.media.mobile} {
+    ${FlexWrapper} {
+      gap: 25px
+    }
+  }
+`;
+
 
 const SkillTitle = styled.h3`
   ${font({ weight: 300, color: `${theme.colors.fontColorSecond}`, Fmax: 24, Fmin: 16})};
