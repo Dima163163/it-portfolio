@@ -3,6 +3,8 @@ import photo from '../../../assets/images/photo.png';
 import photo2x from '../../../assets/images/photo@2x.png';
 import photo3x from '../../../assets/images/photo@3x.png';
 import photoWebp from '../../../assets/images/photo.webp';
+import photoWebp2x from '../../../assets/images/photo@2x.webp';
+import photoWebp3x from '../../../assets/images/photo@3x.webp';
 import { FlexWrapper } from '../../../components/flexWrapper/FlexWrapper';
 import { Ellipse } from '../../../components/ellipse/Ellipse';
 import { Container } from '../../../components/container/Container';
@@ -69,8 +71,8 @@ export const Main: React.FC = () => {
               <S.MainSkill $inset={'auto auto 20% 3%'}>&lt;/</S.MainSkill>
               <S.MainSkill $inset={'2% 40% auto auto'}>TS</S.MainSkill>
               <picture>
-                <source srcSet={photoWebp} type='image/webp'/>
-                <source srcSet={`${photo2x} 2x, ${photo3x} 3x`}/>
+                <source srcSet={`${photoWebp} 1x, ${photoWebp2x} 2x, ${photoWebp3x} 3x`} type='image/webp'/>
+                <source srcSet={`${photo2x} 2x, ${photo3x} 3x`} type='image/png'/>
                 <S.Photo src={photo} alt={photo} />
               </picture>
             </S.ImageWrapper>
