@@ -43,8 +43,7 @@ const Greeting = styled.span`
 `;
 
 const MainName = styled.p`
-  ${font({family: '"NEXT ART", sans-serif', weight: 700, Fmax: 72, Fmin: 52})};
-  line-height: 120%;
+  ${font({family: '"NEXT ART", sans-serif', weight: 700, Fmax: 72, lineHeight: '120%', Fmin: 52})};
 
   & + & {
     margin-bottom: 27px;
@@ -112,9 +111,9 @@ const ImageWrapper = styled.div`
     left: -40px;
     right: -40px;
     bottom: -40px;
-    background: linear-gradient(to bottom, transparent 0%, rgba(65, 65, 65, 0.23) 70%,#1f1f1f 80%, #1f1f1f 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(65, 65, 65, 0.23) 70%, ${theme.colors.primaryBg} 80%);
     z-index: 4;
-    filter: blur(15px)
+    filter: blur(20px);
   }
 
   img {
