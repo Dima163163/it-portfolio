@@ -12,6 +12,7 @@ type WrapperPhotoPropsType = {
 const About = styled.section`
   padding: 50px 0 140px;
   overflow: hidden;
+  background-image: linear-gradient(to bottom, ${theme.colors.secondaryBg} 0%, ${theme.colors.primaryBg} 70%);
 
   @media ${theme.media.tablet} {
     padding: 45px 0 126px;

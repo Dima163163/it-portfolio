@@ -34,7 +34,7 @@ export const GoToBtn = () => {
 
 const StyledGoToBtn = styled.button`
   border-radius: 20px;
-  background-color: rgb(248, 192, 7, 0.3);
+  background-color: ${theme.colors.firstBgBtn};
   border: 2px solid transparent;
   min-width: 60px;
   height: 60px;
@@ -42,7 +42,7 @@ const StyledGoToBtn = styled.button`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: ${theme.colors.fontColorFirst};
+  color: ${theme.colors.fontColorThird};
   position: fixed;
   right: 30px;
   bottom: 30px;

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../../styles/Theme';
 import { font } from '../../../styles/Common';
+import { Ellipse } from '../../../components/ellipse/Ellipse';
 
 type MainSkillPropsType = {
   $inset?: string;
@@ -96,6 +97,25 @@ const ImageWrapper = styled.div`
   min-width: 632px;
   height: 640px;
   margin-right: -32px;
+
+  ${Ellipse} {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    right: -40px;
+    bottom: -40px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(65, 65, 65, 0.23) 70%,#1f1f1f 80%, #1f1f1f 100%);
+    z-index: 4;
+    filter: blur(15px)
+  }
 
   img {
     position: absolute;

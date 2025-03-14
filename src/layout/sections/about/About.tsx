@@ -30,7 +30,7 @@ export const About: React.FC = () => {
       <Container>
         <S.AboutWrapper>
           <Ellipse
-            $width='792px'
+            $width='796px'
             $height='792px'
             $boxshadow='0 4px 70px rgba(255, 255, 255, 0.25)'
             $inset='86px auto auto -58px'

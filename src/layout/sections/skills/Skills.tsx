@@ -83,6 +83,7 @@ export const Skills: React.FC = () => {
       <Container>
         <SectionTitle>My Skills</SectionTitle>
         <FlexWrapper $wrap={'wrap'} $gap={'30px'} $justify={'center'}>
+        {/* <S.SkillsBox> */}
           <Fade damping={0.3} cascade={true}>
             {skillsArr.length > 0 &&
               skillsArr.map((item, i) => (
@@ -94,6 +95,7 @@ export const Skills: React.FC = () => {
                   />
             ))}
           </Fade>
+        {/* </S.SkillsBox> */}
         </FlexWrapper>
       </Container>
     </S.Skills>

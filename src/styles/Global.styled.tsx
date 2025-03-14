@@ -27,7 +27,6 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
-
   ul {
     list-style: none;
   }

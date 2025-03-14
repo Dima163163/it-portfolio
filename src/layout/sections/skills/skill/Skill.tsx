@@ -11,14 +11,12 @@ type SkillPropsType = {
 export const Skill: React.FC<SkillPropsType> = (props: SkillPropsType) => {
   return (
     <S.Skill>
-      <S.IconWrapper>
-        <Icon
-          iconId={props.iconId}
-          viewBox={props.viewBox}
-          width='120'
-          height='120'
-        />
-      </S.IconWrapper>
+      <Icon
+        iconId={props.iconId}
+        viewBox={props.viewBox}
+        width='120'
+        height='120'
+      />
       <S.SkillTitle>{props.title}</S.SkillTitle>
     </S.Skill>
   );

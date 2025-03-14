@@ -7,13 +7,13 @@ export const MobileMenu: React.FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   const onBurgerBtnClick = () => {
-    setMenuIsOpen(!menuIsOpen);
-
     if (!menuIsOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
     }
+
+    setMenuIsOpen(!menuIsOpen);
   };
   return (
     <S.MobileMenu>
@@ -27,7 +27,7 @@ export const MobileMenu: React.FC = () => {
         <span></span>
       </S.BurgerButton>
 
-      <S.MobileMenuPopup $isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
+      <S.MobileMenuPopup $isOpen={menuIsOpen} onClick={onBurgerBtnClick}>
         <Menu direction={'column'} onBurgerBtnClick={onBurgerBtnClick}/>
       </S.MobileMenuPopup>
     </S.MobileMenu>
