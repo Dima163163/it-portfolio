@@ -52,7 +52,7 @@ export const Main: React.FC = () => {
                 $inset='auto 0 0 auto'
               >
                 <svg
-                  viewBox='152 152 575 575'
+                  viewBox='153 153 575 575'
                   fill='none'
                   xmlns='http://www.w3.org/2000/svg'
                 >
