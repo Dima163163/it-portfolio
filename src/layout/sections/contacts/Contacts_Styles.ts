@@ -3,7 +3,6 @@ import { theme } from '../../../styles/Theme';
 import { Button } from '../../../components/button/Button';
 
 const Contacts = styled.section`
-  position: relative;
   text-align: center;
   padding: 100px 0;
   background-image: linear-gradient(to bottom, ${theme.colors.secondaryBg} 0%, ${theme.colors.primaryBg} 70%);
@@ -37,6 +36,7 @@ const Field = styled.input`
 `;
 
 const Form = styled.form`
+  position: relative;
   margin: 0 auto;
   max-width: 500px;
   width: 100%;
