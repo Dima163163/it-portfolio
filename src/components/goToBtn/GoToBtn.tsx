@@ -33,7 +33,7 @@ export const GoToBtn = () => {
 };
 
 const StyledGoToBtn = styled.button`
-  border-radius: 20px;
+  border-radius: 8px;
   background-color: ${theme.colors.firstBgBtn};
   border: 2px solid transparent;
   min-width: 60px;
@@ -48,4 +48,5 @@ const StyledGoToBtn = styled.button`
   bottom: 30px;
   z-index: 3;
   padding: 15px;
+  box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
 `;
