@@ -6,7 +6,6 @@ import { About } from './layout/sections/about/About';
 import { Main } from './layout/sections/main/Main';
 import { Portfolio } from './layout/sections/portfolio/Portfolio';
 import { Skills } from './layout/sections/skills/Skills';
-import { theme } from './styles/Theme';
 import { Particle } from './components/particle/Particle';
 import { createContext, useState } from 'react';
 import { GoToBtn } from './components/goToBtn/GoToBtn';

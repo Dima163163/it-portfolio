@@ -41,7 +41,7 @@ export const Main: React.FC = () => {
               I've been doing front-end development for a year now. Do you need
               a site layout, or maybe a turnkey website? Then contact me!
             </S.MainInfo>
-            <Button as={'a'} href='#contact'>Contact me</Button>
+            <Button as={'a'} href='contact'>Contact me</Button>
           </S.MainContent>
           <Tilt>
             <S.ImageWrapper>
