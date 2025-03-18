@@ -154,7 +154,10 @@
   </g>
 
   <g id="arrowTop">
-    <path d="M28.5 16.5L18 6L7.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M18 6L18 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M12.7619 19.9365V5.93652" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5.7619 12.9365L12.7619 5.93652L19.7619 12.9365" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- <path d="M28.5 16.5L18 6L7.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M18 6L18 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /> -->
   </g>
 </svg>

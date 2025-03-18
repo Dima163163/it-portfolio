@@ -26,7 +26,7 @@ export const GoToBtn = () => {
   return (
     <>
     {showBtn && <StyledGoToBtn onClick={goToTop}>
-      <Icon viewBox='0 0 36 36' iconId='arrowTop' width='36' height='36' />
+      <Icon viewBox='5 4 14 14' iconId='arrowTop' width='36' height='28' />
     </StyledGoToBtn>}
     </>
   );
@@ -48,5 +48,7 @@ const StyledGoToBtn = styled.button`
   bottom: 30px;
   z-index: 3;
   padding: 15px;
-  box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
+  &:hover {
+    box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
+  }
 `;
